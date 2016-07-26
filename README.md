@@ -19,6 +19,8 @@ function init() {
 }
 ```
 
+But what could those numbers be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as keyboard event values. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
+
 In `index.html`, you'll see that we're loading the file in for you:
 
 ``` html
@@ -56,13 +58,11 @@ function onKeyDownHandler(e) {
 }
 ```
 
-But what could those numbers be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as keyboard event values. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
-
 Have fun!
 
 ## Hints
 
-Notice that we're looking at both `e.detail` and `e.which`. In browsers nowadays, `e.which` is usually sufficient; however, I'll be honest with you: it's not universally supported, it's technically deprecated, and it doesn't work with our tests. So check `e.detail` too, please. :)
+Be aware that we're looking at both `e.detail` and `e.which`. In browsers nowadays, `e.which` is usually sufficient; however, I'll be honest with you: it's not universally supported, it's technically deprecated, and it doesn't work with our tests. So check `e.detail` too, please. :)
 
 Also note that we're calling `parseInt` on the key value. This is because the event handler might pass us the string representation of the number, which wouldn't work so well with our comparisons.
 
