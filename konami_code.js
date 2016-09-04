@@ -1,5 +1,19 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+var index = 0
+var element = document.getElementsByTagName('body')[0];
 
-function init() {
-  // your code here
+function init(e) {
+    if(e) {
+    	if(parseInt(e.which || e.detail) == code[index]) {
+          index++;
+          if(index == code.length - 1) {
+              alert("YOU DID IT");
+              index = 0;
+          } else {
+              alert('too bad');
+              index = 0;
+          }
+        }
+    }
+    element.addEventListener('keydown', init);
 }
