@@ -8,11 +8,11 @@ function init() {
 
     if (charCodeInt === code[index]) {
       index++;
-      if (index === code.length){
-        alert("YOU DID IT!");
-        index = 0;
-      }
     } else {
+      index = 0;
+    }
+    if (index === code.length){
+      alert("YOU DID IT!");
       index = 0;
     }
   });
