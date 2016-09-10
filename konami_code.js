@@ -17,7 +17,3 @@ function init() {
     }
   });
 }
-
-// function secretCode(charCodeString) {
-//
-// }
