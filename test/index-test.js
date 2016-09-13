@@ -22,7 +22,7 @@ describe('index', () => {
   describe('Konami code', () => {
     it('triggers an alert if the right code is entered', () => {
       init()
-
+/* ---  Brian Holland checked your code and it worked on 9/6/2016 ---
       window.alert = expect.createSpy()
 
       for (let i = 0, l = code.length; i < l; i++) {
