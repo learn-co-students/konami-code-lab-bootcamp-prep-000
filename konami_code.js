@@ -5,15 +5,15 @@ var count = 0;
 function init() {
   document.body.addEventListener('keydown', function(e) {
     const key = parseInt(e.which || e.detail);
-  });
-  if(key === code[count]) {
-    count++;
+    if(key === code[count]) {
+      count++;
 
-    if(count === code.length - 1) {
-      alert('You did it!');
+      if(count === code.length - 1) {
+        alert('You did it!');
+      }
     }
-  }
-  else {
-    count = 0;
-  }
+    else {
+      count = 0;
+    }
+  });
 }
