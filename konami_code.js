@@ -1,5 +1,22 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
+var codeIndex = 0;
+
 function init() {
-  // your code here
+  document.body.addEventListener('keydown', keydownHandler);
+}
+
+function keydownHandler(e){
+  const key = parseInt(e.which||e.detail);
+  if(key === code[codeIndex]){
+    codeIndex++;
+    // See if that was the last button
+    if(codeIndex === code.length - 1){
+      alert("GOD MODE UNLOCKED!");
+      codeIndex = 0;
+    }
+  } else {
+    codeIndex = 0;
+  }
+
 }
