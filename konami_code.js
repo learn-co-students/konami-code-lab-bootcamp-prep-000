@@ -1,22 +1,23 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 
-var index = 0;
 
-function init(e) {
-  const key = parseInt(e.detail || e.which)
+function init() {
+  var index = 0;
 
-  if (key === code[index]) {
-    index++
+  const bodski = document.body;
 
-    if (index === code.length - 1) {
-      alert("YOU DID IT!")
+  bodski.addEventListener('keydown', function (e) {
+    const key = parseInt(e.detail || e.which)
+
+    if (key === code[index]) {
+      index++
+
+      if (index === code.length - 1) {
+        alert("YOU DID IT!")
+        index = 0
+      }
+    } else {
       index = 0
     }
-  } else {
-    index = 0
-  }
-};
-
-const bodski = document.body;
-
-bodski.addEventListener('keydown', init);
+  };
+  })
