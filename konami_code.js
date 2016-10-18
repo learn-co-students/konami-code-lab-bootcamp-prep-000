@@ -17,6 +17,6 @@ function init(e) {
   }
 };
 
-const bodski = document.getElementById('body');
+const bodski = document.body;
 
 bodski.addEventListener('keydown', init);
