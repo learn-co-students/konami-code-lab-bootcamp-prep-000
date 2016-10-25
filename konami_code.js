@@ -6,21 +6,17 @@ var index = 0
 //You'll want to attach an event listener to document.body and check for 'keydown' events.
 //If the user enters this special code, alert() a congratulatory message.
 
-//document.body.addEventListener('keydown', init()); // need to add false as last parameter?
-
 //function init(e) {
 //document.onkeydown = function init(e) {
-
-//dude said::::::
-// function init() {
-//   document.body.addEventListener('keydown', onKeyDownHandler);  // what is 'onKeyDownHandler' ??
-// }
 
 function init() {
   document.body.addEventListener('keydown', onKeyDownHandler);
 }
 init();  // need to call init()
 
+
+// note: could make onKeyDownHandler(e) function anonymous and change line above to:
+// document.body.addEventListener('keydown', function(e) {
 
 function onKeyDownHandler(e) {
   const key = parseInt(e.detail || e.which);
