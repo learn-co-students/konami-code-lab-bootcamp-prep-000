@@ -19,7 +19,7 @@ var index = 0
 function init() {
   document.body.addEventListener('keydown', onKeyDownHandler);
 }
-init;  // need to call init()
+init();  // need to call init()
 
 
 function onKeyDownHandler(e) {
