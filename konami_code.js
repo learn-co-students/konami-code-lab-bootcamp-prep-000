@@ -1,21 +1,21 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-var counter = 0
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+var counter = 0;
 
 function init() {
-  const body = document.getElementsByTagName('body')[0]
+  const body = document.getElementsByTagName('body')[0];
 
   body.addEventListener('keydown', function onKeyDownHandler(e) {
-    const key = parseInt(e.detail || e.which)
+    const key = parseInt(e.detail || e.which);
 
     if (key === code[counter]) {
-      counter++
+      counter++;
 
       if (counter === code.length - 1) {
         alert("Noice!")
-        counter = 0
+        counter = 0;
       }
     } else {
-      counter = 0
+      counter = 0;
     }
   }
 )
