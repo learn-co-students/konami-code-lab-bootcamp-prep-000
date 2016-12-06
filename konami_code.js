@@ -11,7 +11,7 @@ function init() {
       counter++
 
       if (counter === code.length - 1) {
-        alert("Konami Code")
+        alert("Noice!")
         counter = 0
       }
     } else {
