@@ -18,6 +18,8 @@ if(index === code.length - 1) {
 index = 0}
 }
 
-else {index = 0}
+else {
+  index = 0
+}
 })
 }
