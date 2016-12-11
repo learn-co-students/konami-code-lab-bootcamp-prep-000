@@ -4,9 +4,7 @@ function init() {
 
 var index = 0
 
-const input = document.querySelector('code')
-
-input.addEventListener('keydown', function(e){
+document.body.addEventListener('keydown', function(e){
 
 const key = parseInt(e.detail || e.which);
 
@@ -14,7 +12,7 @@ if(code[index] === key) {
   index++
 
 if(index === code.length - 1) {
-  alert(“Congratulations, you are a zen master!”)
+  alert('Congratulations!')
 index = 0}
 }
 
