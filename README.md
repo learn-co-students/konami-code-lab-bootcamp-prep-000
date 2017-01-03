@@ -48,7 +48,7 @@ function onKeyDownHandler(e) {
   if (key === alphabet[index]) {
     index++
 
-    if (index === alphabet.length - 1) {
+    if (index === alphabet.length) {
       alert("YOU DID IT!")
       index = 0
     }
@@ -69,3 +69,5 @@ Also note that we're calling `parseInt` on the key value. This is because the ev
 ## Resources
 
 - [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
+
+<p class='util--hide'>View <a href='https://learn.co/lessons/konami-code-lab'>Konami Code Lab</a> on Learn.co and start learning to code for free.</p>
