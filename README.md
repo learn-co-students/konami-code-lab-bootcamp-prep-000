@@ -44,7 +44,7 @@ var index = 0
 // unattached event handler
 function onKeyDownHandler(e) {
   const key = parseInt(e.detail || e.which)
-
+  console.log(key);
   if (key === alphabet[index]) {
     index++
 
