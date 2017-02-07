@@ -20,16 +20,16 @@ function init() {
       // if still in the loop, check if index is equal to code array length
       if (index === code.length - 1) {
         // reset the index counter
-        index = 0
+        index = 0;
         // if yes, you passed, congrats!
-        alert("Congrats!")
+        alert("Congrats!");
       }
 
 
 
   // if key doesn't match current index in code array, then reset the index to zero
   } else {
-    index = 0
+    index = 0;
   }
 
 
