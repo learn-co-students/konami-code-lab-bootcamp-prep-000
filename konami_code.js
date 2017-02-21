@@ -4,11 +4,12 @@ var progress=0;
 
 function init() {
   document.body.addEventListener('keydown', (e)=>{
-    console.log(e.which);
-    const key = parseInt(e.detail || e.which)
+    const key = parseInt(e.detail || e.which);
+    console.log(key);
       if (key === code[progress]){
         progress++;
-        if (progress===code.length-1){
+        console.log(progress);
+        if (progress===code.length){
           alert("You did it!");
           progress=0;
         }
