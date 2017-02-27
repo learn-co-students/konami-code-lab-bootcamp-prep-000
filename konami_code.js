@@ -1,11 +1,11 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-const codeLen = code.length
-var index = 0
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
+      codeLen = code.length
 
 function init() {
   // your code here
-  document.body.addEventListener('keydown', function(e) {
+  var index = 0
 
+  document.body.addEventListener('keydown', function(e) {
     const key = parseInt(e.detail || e.which)
 
     if (key === code[index]) {
@@ -14,7 +14,6 @@ function init() {
         alert("YOU DID IT!")
         index = 0
       }
-
     } else {
       index = 0
     }
