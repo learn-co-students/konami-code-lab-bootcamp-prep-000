@@ -1,3 +1,16 @@
+- create totalCounter that adds up key bindings
+- create indexCounter that loops from 0 to code.length
+- capture key pressed in variable
+- every time there is a keydown, IF the key matches code[i], add that value(parseInt) to counter
+IF the key does not match code[i], reset counter & indexCounter to 0
+
+in the init function
+
+
+
+
+
+
 # Contributing to Learn.co Curriculum
 
 We're really excited that you're about to contribute to the [open curriculum](https://learn.co/content-license) on [Learn.co](https://learn.co). If this is your first time contributing, please continue reading to learn how to make the most meaningful and useful impact possible.
