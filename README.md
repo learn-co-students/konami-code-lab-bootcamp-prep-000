@@ -48,7 +48,7 @@ function onKeyDownHandler(e) {
   if (key === alphabet[index]) {
     index++
 
-    if (index === alphabet.length - 1) {
+    if (index === alphabet.length) {
       alert("YOU DID IT!")
       index = 0
     }
