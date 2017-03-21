@@ -8,7 +8,7 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
+    "test": "mocha -R mocha-multi --timeout 5000 --reporter-options nyan=-,json=.results.json"
   },
   "repository": {
     "type": "git",
