@@ -8,7 +8,7 @@ function init() {
       index++
 
       if (index === code.length - 1) {
-        alert("YOU DID IT!")
+        window.alert("YOU DID IT!")
         index = 0
       }
     } else {
