@@ -9,11 +9,10 @@ function init() {
 
   body.addEventListener('keydown', function(e) {
 
-    const key = parseInt(e.detail || e.which)
-    console.log(key)
+    const key = parseInt(e.which || e.detail)
+
     if (key === code[index]) {
       index++
-      console.log('match');
 
       if (index === code.length - 1) {
         alert('You broke the Konami Code!')
@@ -24,9 +23,10 @@ function init() {
       index = 0
     }
 
-  })
+  },false)
 
 
 }
+
 
 init();
