@@ -5,14 +5,14 @@ function init() {
   function eventFunc(e){
     const key = parseInt(e.detail || e.which)
     if (key === code[index]){
-      index++
       if (index === code.length - 1){
         alert("YOU DID IT!")
         index = 0
       }
-      else {
-        index = 0
-      }
+      index++
+    }
+    else {
+      index = 0
     }
   }
   document.body.addEventListener('keydown',eventFunc)
