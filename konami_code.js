@@ -4,6 +4,8 @@ const code = [49, 50];
 
 var index = 0;
 
+var e = window.event;
+
 // add event listener
 
 document.body.addEventListener('keydown', init, false); 
