@@ -6,11 +6,11 @@ var index = 0;
 
 // add event listener
 
-document.body.addEventListener('keydown', init, false);
+function init() {document.body.addEventListener('keydown', boop, false);}
 
 // define init()
 
-function init(e) {
+function boop(e) {
 
   const key = parseInt(e.detail || e.which);
 
