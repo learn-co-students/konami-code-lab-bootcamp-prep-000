@@ -10,7 +10,6 @@ function callback(e){
   var key = parseInt(e.which || e.detail)
   for(var i = 0; i <= code.length; i++){
     if(key === code[i]){
-      console.log("not yet");
       index++
         if(index === code.length - 1){
           alert("You cracked the code!!!");
