@@ -31,7 +31,8 @@ This is JavaScript's way of pulling in code from outside the page. Here, we've g
 
 You'll want to attach an event listener to `document.body` and check for `'keydown'` events. If the user enters this special code, `alert()` a congratulatory message. But if they start entering anything else anywhere along the way, don't trigger anything out of the ordinary.
 
-When you're testing the code out, be sure to call `init()` to set everything up!
+When you're testing the code out, be sure to call `init()` to set everything up! Make sure to remove the init call when you are ready to
+run `learn test` since the test suite does all the function calls.
 
 Stuck on how to get started? Here's a contrived, short example:
 
