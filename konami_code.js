@@ -1,5 +1,20 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+var code=[38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
 
 function init() {
-  // your code here
+  var index= 0;
+  document.body.addEventListener('keydown', a);
+
+  function a(e) {
+    var key=parseInt(e.which || e.details);
+    if (key===code[index]) {
+      index++;
+      if(index===code.length) {
+        alert("Konami Code Entered.");
+        index=0;
+      }
+    } else {
+      index=0;
+    }
+  }
 }
