@@ -11,7 +11,7 @@ function init() {
       index++;
 
       if (index === code.length) {
-        alert("KONAMI CODE INSERT!");
+        alert("KONAMI CODE ROCKS!!!");
         index = 0;
       }
     } else index = 0;
