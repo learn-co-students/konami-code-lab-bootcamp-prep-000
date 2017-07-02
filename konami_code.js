@@ -9,6 +9,7 @@ function init() {
     //check event for 'keydown'
     //function should accept e as an argument
   document.body.addEventListener('keydown', function(e) {
+
     //create variable that will turn which key user pressed into a number
     var userKey = parseInt(e.which || e.detail);
 
