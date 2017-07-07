@@ -30,12 +30,13 @@ When you're testing the code out in the browser, be sure to call `init()` to set
 
 Stuck on how to get started? Here's a contrived, short example:
 ```js
-const alphabet = ['a', 'b', 'c'];
+// Key codes for A, B, and C keys.
+const alphabet = [65, 66, 67];
 
-// keep track of index outside of the event handler
+// Keep track of index outside of the event handler.
 let index = 0;
 
-// unattached event handler
+// This is the function that would be invoked by the event listener.
 function onKeyDownHandler(e) {
   const key = parseInt(e.detail || e.which);
 
