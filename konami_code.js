@@ -11,7 +11,7 @@ function init() {
       ind++;
 
       if(ind===code.length){
-        alert("DZIAŁA LOL");
+        window.alert("DZIAŁA LOL");
         ind=0;
 
 
