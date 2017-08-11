@@ -57,7 +57,7 @@ function onKeyDownHandler(e) {
 Have fun!
 
 ## Hints
-Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the [`keydown` reference on MDN][keydown]. You might try using `console.log()` with each of these options to find the correct attribute.
+Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the [`keydown` reference on MDN][keydown]. This would be a good chance to use `console.log()` to check out the value of `e.detail`, `e.which`, and `e.location`.
 
 Also note that we're calling `parseInt` on the key value. This is because the event handler might pass us the string representation of the number, which wouldn't work so well with our comparisons.
 
@@ -67,5 +67,4 @@ Also note that we're calling `parseInt` on the key value. This is because the ev
 
 [keydown]: https://developer.mozilla.org/en-US/docs/Web/Events/keydown
 
-<p class='util--hide'>View <a href='https://learn.co/lessons/konami-code-lab'>Konami Code Lab</a> on Learn.co and start learning to code for free.</p>
 <p class='util--hide'>View <a href='https://learn.co/lessons/konami-code-lab'>Konami Code Lab</a> on Learn.co and start learning to code for free.</p>
