@@ -1,6 +1,24 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
-  // Write your JavaScript code inside the init() function
+  const activateCheats = document
 
+  var correctSequence = false
+  var i = 0;
+
+  activateCheats.addEventListener('keydown', function(event) {
+    console.log(event.location);
+    if(event.location === code[i])
+    {
+      i++
+      if(i === code.length)
+      {
+        alert("Cheats Activated!")
+      }
+    }
+    else {
+      i = 0
+    }
+
+  })
 }
