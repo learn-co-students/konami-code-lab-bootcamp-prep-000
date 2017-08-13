@@ -7,8 +7,8 @@ function init() {
   var i = 0;
 
   activateCheats.addEventListener('keydown', function(event) {
-    console.log(event.which);
-    if(event.which === code[i])
+    console.log(event.location);
+    if(event.location === code[i])
     {
       i++
       if(i === code.length)
