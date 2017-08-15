@@ -12,6 +12,12 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
   // your code here
+  const target = document.body
+  target.addEventListener('keydown', function(key) {
+    console.log(key.which)
+
+  })
+
 }
 ```
 
