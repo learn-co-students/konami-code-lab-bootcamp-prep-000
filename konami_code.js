@@ -21,9 +21,12 @@ function init() {
           //console.log('false')
           return false
         }
-        //console.log('true')
-        return true
+        console.log(`${a.join(', ')} at length=${a.length}, and ${b.join(', ')}, at length=${b.length}`);
+        console.log(`${a[9]===b[9]}`)
+        
       }
+      console.log('true')
+      return true
     }
   }
   //check with konami code
@@ -31,8 +34,10 @@ function init() {
     alert.close
     logg(d)
     if(equals(code, hist)){
-      //console.log('congrats!')
+      console.log(`${hist.join(', ')}`)
+      console.log('congrats!')
       alert('Congrats!')
+      let index=0;
     }
   }
   //attach eventListener
