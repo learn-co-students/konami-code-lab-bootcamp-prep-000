@@ -11,7 +11,7 @@ function init() {
       count++;
 
       if (count === code.length) {
-        alert("Almost done!");
+        alert("There's no stopping you now!");
         count = 0;
       }
     } else {
