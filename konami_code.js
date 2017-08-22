@@ -12,11 +12,12 @@ function init() {
 })*/
 body.addEventListener("keydown", function(e) {
   //console.log('key pressed is' + e.which)
-  if (parseInt(e.which) !== parseInt(code[index])) {
+  const key = parseInt(e.detail || e.which)
+  if (key !== code[index]) {
     index = 0
     //console.log("code restart")
   }
-  if (parseInt(e.which) === parseInt(code[index])) {
+  if (key === code[index]) {
     index++;
   //  console.log("entering code")
     //console.log("index at " + index)
