@@ -6,16 +6,16 @@ function init() {
   const body = document.querySelector('body')
 
   body.addEventListener('keydown', function onKeyDownHandler(e){
-    const key = parseInt(e.detail || e.which || e.location)
+    const key = parseInt(e.detail || e.which)
 
     if (key === code[index]){
       index++
-    }
 
-    if (index === code.length) {
-      alert("Hurray!")
+      if (index === code.length) {
+        alert("Hurray!")
 
-      index = 0
+        index = 0
+      }
     }else {
       index = 0
     }
