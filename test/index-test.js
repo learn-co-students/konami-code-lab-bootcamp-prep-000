@@ -26,7 +26,8 @@ describe('index', () => {
       window.alert = expect.createSpy()
 
       for (let i = 0, l = code.length; i < l; i++) {
-        triggerKeyDown(code[i])
+        triggerKeyDown(code[i]);
+        console.log(code[i].detail);
       }
 
       expect(window.alert).toHaveBeenCalled()
