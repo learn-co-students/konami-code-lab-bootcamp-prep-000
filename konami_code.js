@@ -5,20 +5,18 @@ function init() {
 
   let index = 0;
 
-  document.addEventListener('keydown', function(e) { //why 'function(e)'? dunno!
+  document.body.addEventListener('keydown', onKeyDownHandler);  /*{
     console.log(e.which)
     onKeyDownHandler(e)
-  })
+  })*/
 
-  function onKeyDownHandler(e) {
-    const key = parseInt(e.detail || e.which);
+  function onKeyDownHandler(keydown) {
+    const key = parseInt(keydown.detail || keydown.which);
 
     if (key === code[index]) {
-      console.log(index) //test
       index++;
-      console.log(index) //test
-        if (index === code.length) {
-          alert("Hurray!");
+      if (index === code.length) {
+          window.alert("Hurray!");
           index = 0;
         }
     } else {
