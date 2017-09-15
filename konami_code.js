@@ -1,26 +1,27 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+// const code = [65,66,67]
+
+let index = 0
+let entered = []
 
 function init() {
-  // Write your JavaScript code inside the init() function
+  document.body.addEventListener("keydown", function(e) {
+    let keyed = parseInt(e.which|| e.detail)
 
-  document.body.addEventListener('keydown', function(e){
-    var keyStroke = parseInt(e.which || e.detail)
-    var counter = 0;
+    console.log(keyed)
 
-    if (counter === code.length){
-      console.log("Congrats! You have entered the correct code")
-    }
+    if(keyed === code[index]) {
+      entered.push(keyed)
+      index++
 
-    for (var i = 0; i < code.length; i++) {
-      if (keyStroke === code[i]) {
-          counter++;
-          alert(e);
-      }
-      else {
-        counter = 0;
+      if(entered.length === code.length) {
+        alert("Congrats!")
+        index = 0
+        entered = []
       }
     }
-
+    else {
+      index = 0
+    }
   })
-
 }
