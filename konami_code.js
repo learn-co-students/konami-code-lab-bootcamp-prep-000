@@ -17,30 +17,3 @@ function init() {
   })
 }
   // Write your JavaScript code inside the init() function
-
-
-
-//function init() {
-  // Write your JavaScript code inside the init() function
-//  var blankPage = document.querySelector('body');
-  //var input = [];
-  //var keyStrokes = 0;
-//  blankPage.addEventListener('keydown', function(event) {
-    //add inputs into an array
-//    input.push(event.which);
-  //  console.log(input);
-    //compare input values with code array
-  //  for(var i = 0; i < input.length; i++) {
-    //  if(input[i] === code[i]) {
-      //  keyStrokes++;
-  //    } else {
-    //    keyStrokes = 0;
-      //  input = [];
-    //  }
-  //  }
-  //  if(keyStrokes === code.length) {
-  //    alert("HADUKEN")
-  //  }
-//  })
-
-//}
