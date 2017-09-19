@@ -12,7 +12,7 @@ function init() {
     window.addEventListener("keydown", function(e) {
       const key = parseInt(e.detail || e.which);
       if (key == code[i]){
-         i++ ; check()
+         i++ ; check();
       }
       else {
          i  = 0
