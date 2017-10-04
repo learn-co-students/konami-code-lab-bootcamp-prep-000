@@ -5,14 +5,13 @@ let index = 0
 
 //When you're testing the code out in the browser, be sure to call init() to attach the event listener and set everything up
 function init() {
-  const body = document.body
-
-  body.addEventListener('keydown', onKeyDownHandler(e))
+  document.body.addEventListener('keydown', function(e) {onKeyDownHandler(e)})
 }
 
 // This is the function that would be invoked by the event listener.
-function onKeyDownHandler(e) {
-  const key = parseInt(e.detail || e.which);
+function onKeyDownHandler(keystroke) {
+  console.log(keystroke)
+  const key = parseInt(keystroke.detail || keystroke.which);
 
   if (key === code[index]) {
     index++;
