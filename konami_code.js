@@ -1,14 +1,14 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-  var index =0
-function init() {
-  // Write your JavaScript code inside the init() function
-var bodyElement = document.querySelector('body')
-bodyElement.addEventListener('keyDown', checkCode)
-}
-
-function checkCode(e)
+var index =0
+function init()
 {
-  var key = parseInt(e.which || e.detail || e.location)
+  // Write your JavaScript code inside the init() function
+  document.body.addEventListener('keydown', function(e) {
+    console.log(e.detail)
+    console.log(e.which)
+    console.log(e.location)
+    var key = parseInt(e.which || e.detail)
+
   if (key === code[index])
   {
     index++;
@@ -22,7 +22,7 @@ function checkCode(e)
   else
   {
     index = 0;
-  }
 }
-
+})
+}
 init()
