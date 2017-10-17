@@ -17,14 +17,13 @@ function init() {
     if (arr.length == 10) {
       for (var i = 0; i < 10; i++) {
         if (arr[i] !== code[i]) {
-          arr = []
           break
         }
         else if((arr[i] === code[i]) && i == 9) {
           alert("WE DID IT")
-          arr = []
         }
       }
+      arr = arr.splice(1)
     }
   })
 }
