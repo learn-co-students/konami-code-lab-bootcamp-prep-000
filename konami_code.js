@@ -3,9 +3,11 @@ var comp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 let index = 0
 
 function init() {
-  const main = document.body
-  main.addEventListener('keydown', onKeyDownHandler)
+
 }
+
+const main = document.body
+main.addEventListener('keydown', onKeyDownHandler)
 
 init()
 
