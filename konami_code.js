@@ -13,7 +13,6 @@ function onKeyDownHandler(e){
   console.log(e.which || e.detail)
 =======
 const code = [38] //[38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-var comp = [0]//[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 let index = 0
 
 function init() {
