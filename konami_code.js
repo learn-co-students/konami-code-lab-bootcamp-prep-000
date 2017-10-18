@@ -3,13 +3,10 @@ var comp = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 let index = 0
 
 function init() {
-
 }
 
 const main = document.body
 main.addEventListener('keydown', onKeyDownHandler)
-
-init()
 
 function onKeyDownHandler(e){
   const key = parseInt(e.which || e.detail)
