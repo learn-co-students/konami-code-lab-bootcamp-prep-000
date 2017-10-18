@@ -9,7 +9,7 @@ function init() {
 
 init()
 
-function onKeyDownHandler2(e){
+function onKeyDownHandler(e){
   const key = parseInt(e.which || e.detail)
   console.log(e.which || e.detail)
 
