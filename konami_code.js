@@ -16,25 +16,3 @@ function init() {
     }
   });
 }
-
-// const body = document.body.addEventListener('keydown', init);
-// let entered = [];
-//
-// function init(e) {
-//   if(entered.length===10) {
-//     entered.shift();
-//   }
-//   let key = parseInt(e.which || e.detail);
-//   entered.push(key);
-//   console.log(entered);
-//   let check = true;
-//   for(let i=0;i<code.length;i++) {
-//     if(code[i] != entered[i]) {
-//         check = false;
-//     }
-//   }
-//   if(check===true) {
-//     alert("Yeeee");
-//   }
-//
-// };
