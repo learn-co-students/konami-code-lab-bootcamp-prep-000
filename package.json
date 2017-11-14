@@ -2,10 +2,6 @@
   "name": "konami-code-lab",
   "version": "0.1.0",
   "description": "Using event listeners, implement the Konami Code on a page",
-  "engines": {
-    "node": "6.x",
-    "npm": "3.x"
-  },
   "main": "index.js",
   "scripts": {
     "test": "mocha -R mocha-multi --reporter-options nyan=-,json=.results.json"
