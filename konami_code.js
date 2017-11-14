@@ -6,8 +6,8 @@ function init() {
   document.body.addEventListener('keydown', function(e) {
     const key = parseInt(e.detail || e.which);
 
-    if (key === code[index]) {
-      index ++;
+    if (key === code[index]) index ++;
+    else index = 0;
       /*if key entered matches index in code, increment index
       and wait for keydown; and check if the next character
       entered by user matches the next element in code*/
@@ -17,6 +17,6 @@ function init() {
         alert ("You entered the Konami Code correctly!");
       }
 
-    }
+
   });
 }
