@@ -26,7 +26,7 @@ This is JavaScript's way of pulling in code from outside the page. Here, we've g
 
 You'll want to attach an event listener to `document.body` and check for `'keydown'` events. If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. However, if they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
 
-When you're testing the code out in the browser, be sure to call `init()` to set everything up!
+When you're testing the code out in the browser, be sure to call `init()` to attach the event listener and set everything up!
 
 Stuck on how to get started? Here's a contrived, short example:
 ```js
@@ -57,7 +57,7 @@ function onKeyDownHandler(e) {
 Have fun!
 
 ## Hints
-Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the [`keydown` reference on MDN][keydown].
+Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the [`keydown` reference on MDN][keydown]. This would be a good chance to use `console.log()` to check out the value of `e.detail`, `e.which`, and `e.location`.
 
 Also note that we're calling `parseInt` on the key value. This is because the event handler might pass us the string representation of the number, which wouldn't work so well with our comparisons.
 
