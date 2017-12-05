@@ -3,9 +3,6 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
 function init() {
   // Write your JavaScript code inside the init() function
 
-  // Allowed letters
-  const allowedKeys = [37, 38, 39, 40, 65, 66];
-
   // Position in code
   let index = 0;
 
