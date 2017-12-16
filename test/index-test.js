@@ -4,6 +4,18 @@ describe('index', () => {
   function triggerKeyDown(which) {
     const keyboardEvent = document.createEvent("KeyboardEvent")
 
+    // http://stackoverflow.com/questions/10455626/keydown-simulation-in-chrome-fires-normally-but-not-the-correct-key/10520017#10520017
+    Object.defineProperty(keyboardEvent, 'keyCode', {
+      get: function() {
+        return this.keyCodeVal;
+      }
+    });
+    Object.defineProperty(keyboardEvent, 'which', {
+      get: function() {
+        return this.keyCodeVal;
+      }
+    });
+
     keyboardEvent.initKeyboardEvent(
       'keydown',
       true,
@@ -12,9 +24,11 @@ describe('index', () => {
       which,
       which,
       0,
-      null,
-      null
+      which,
+      which
     )
+
+    keyboardEvent.keyCodeVal = which
 
     document.body.dispatchEvent(keyboardEvent)
   }
