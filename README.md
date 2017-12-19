@@ -12,7 +12,7 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
 function init() {
   // your code here
-}
+
 ```
 
 But what could those numbers be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as keyboard event values. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
