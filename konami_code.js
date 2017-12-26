@@ -1,17 +1,19 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-  let index = 0;
+var count = 0;
+
 function init() {
-  document.body.addEventListener('keydown', function (event) {
-    const key = parseInt(event.detail || event.location);
-    if(key === code[index]){
-      index++;
-      if(index === code.length - 1){
-        windows.alert("Hurray!");
-        index = 0;
-      }
-    } else {
-      index = 0;
-    }
-  });
+  document.addEventListener("keydown", onKeyDownHandler);
 }
-init(event);
+
+function onKeyDownHandler(e) {
+  const key = parseInt(e.detail || e.which);
+  if (key === code[count]) {
+	  count++;
+	  if (count === code.length) {
+      alert("Hurray!");
+      count=0;
+	  }
+  }  else {
+	count = 0;
+  }
+}
