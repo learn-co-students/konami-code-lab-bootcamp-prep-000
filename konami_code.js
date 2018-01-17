@@ -18,7 +18,7 @@ var index = 0
 //   }
 // }
 
-document.body.addEventListener('keydown',function init(e) {
+document.body.addEventListener('keydown', (event) => {
   const key = e.keyCode;
   if (key === code[index]) {
     index++;
