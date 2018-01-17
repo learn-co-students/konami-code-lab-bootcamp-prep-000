@@ -3,22 +3,8 @@ const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 var index = 0
 
 
-// function init(e) {
+function init(e) {
   
-//   const key = e.keyCode;
-//   if (key === code[index]) {
-//     index++;
-//     if (index === code.length) {
-//       window.alert("Hurray!");
-
-//       index = 0;
-//     }
-//   } else {
-//     index = 0;
-//   }
-// }
-
-document.body.addEventListener('keydown', (event) => {
   const key = e.keyCode;
   if (key === code[index]) {
     index++;
@@ -30,7 +16,8 @@ document.body.addEventListener('keydown', (event) => {
   } else {
     index = 0;
   }
-});
+}
+document.body.addEventListener('keydown', init);
 
 
 
