@@ -9,9 +9,9 @@ function init() {
 
 function keyHandler(e) {
   
-  const key = e.keyCode;
-  if (key === code[index]) {
+  if (e.keyCode === code[index]) {
     index++;
+    
     if (index === code.length) {
       window.alert("Hurray!");
 
