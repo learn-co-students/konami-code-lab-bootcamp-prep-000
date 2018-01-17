@@ -4,11 +4,12 @@ var index = 0
 
 
 function init(e) {
+  
   const key = e.keyCode;
   if (key === code[index]) {
     index++;
     if (index === code.length) {
-      alert("Hurray!");
+      window.alert("Hurray!");
 
       index = 0;
     }
@@ -16,7 +17,6 @@ function init(e) {
     index = 0;
   }
 }
-
 document.body.addEventListener('keydown', init);
 
 
