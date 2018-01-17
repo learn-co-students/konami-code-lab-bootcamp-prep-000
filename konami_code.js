@@ -22,8 +22,7 @@ function keyHandler(e) {
   }
 }
 
-
-
+init();
 
 // function init(e) {
 //   alert(e.char);
