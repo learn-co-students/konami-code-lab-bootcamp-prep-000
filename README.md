@@ -10,6 +10,8 @@ In `konami_code.js`, you'll notice that we've provided very little: well, just a
 ```js
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
+let index = 0;
+
 function init() {
   // your code here
 }
