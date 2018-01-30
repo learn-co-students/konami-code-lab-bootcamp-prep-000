@@ -1,6 +1,6 @@
 describe('index', () => {
   const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-
+  
   function triggerKeyDown(which) {
     const keyboardEvent = document.createEvent("KeyboardEvent")
 
@@ -15,7 +15,7 @@ describe('index', () => {
       null,
       null
     )
-
+    // console.log("dispatching keyboardEvent with key: " + keyboardEvent.key + "; char: " + keyboardEvent.char + "; location: " + keyboardEvent.location)
     document.body.dispatchEvent(keyboardEvent)
   }
 
@@ -26,6 +26,7 @@ describe('index', () => {
       window.alert = expect.createSpy()
 
       for (let i = 0, l = code.length; i < l; i++) {
+        // console.log("triggerKeyDown with " + code[i])
         triggerKeyDown(code[i])
       }
 
