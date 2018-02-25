@@ -10,7 +10,7 @@ function init() {
 
 // This is the function that would be invoked by the event listener.
 function onKeyDownHandler(keystroke) {
-  console.log(keystroke)
+  // console.log(keystroke)
   const key = parseInt(keystroke.detail || keystroke.which);
 
   if (key === code[index]) {
@@ -25,17 +25,3 @@ function onKeyDownHandler(keystroke) {
     index = 0;
   }
 }
-
-/*
-const main = document.getElementById('main')
-
-main.addEventListener('click', function(event) {
-  alert('I was clicked!')
-})
-
-const input = document.querySelector('input')
-
-input.addEventListener('keydown', function(e) {
-  console.log(e.which)
-})
-*/
