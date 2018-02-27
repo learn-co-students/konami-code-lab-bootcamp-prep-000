@@ -12,7 +12,6 @@ function init() {
       index ++;
       if(index === code.length){
         alert('WOO!');
-        index = 0;
       }
     } else {
       index = 0;
