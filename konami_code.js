@@ -6,17 +6,15 @@ function init() {
   
   let index = 0;
   
-  document.addEventListener('keydown', function (event) {
-  	const whichName = parseInt(event.which || event.detail);
-  	console.log(whichName);
-  	const key = whichName;
+  document.addEventListener('keydown', event => {
+  	const key = parseInt(event.which || event.detail);
+  	//console.log(key);
 
 	  if (key === code[index]) {
       index++;
-      console.log('index: ' + index);
- 
+
       if (index === code.length) {
-        window.alert("Congratulations!");
+        alert("Congratulations!");
       index = 0;
       }
     } else {
