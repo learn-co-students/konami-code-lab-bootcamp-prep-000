@@ -7,15 +7,15 @@ function init() {
   let index = 0;
   
   let body = document.querySelector('body');
-  body.addEventListener('keyDown', checkCode);
+  body.addEventListener('keydown', checkCode);
   
   function checkCode(e){
     const key = parseInt(e.detail || e.which);
     
-    if (key === code[i]) {
+    if (key === code[index]) {
       index++;
       
-      if (key === code.length - 1) {
+      if (index === code.length) {
         alert("code compelte");
         index = 0;
       }
