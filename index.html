@@ -7,7 +7,34 @@
     <link rel="stylesheet" href="node_modules/mocha/mocha.css" />
   </head>
 
-  <body>
+  <body id="detector">
+    <style>
+      body{
+        background-color: tomato;
+      }
+      .cb, .cb li{
+        text-align: center;
+        font-weight: bold;
+        display: block;
+        list-style:none;
+      }
+    </style>
+    <h1 class='cb'>Test Konami Code</h1>
+    <br>
+    <hr>
+    <br>
+    <ul class='cb'>
+      <li>Up,</li>
+      <li>Up,</li>
+      <li>Down,</li>
+      <li>Down,</li>
+      <li>Left,</li>
+      <li>Right,</li>
+      <li>Left,</li>
+      <li>Right,</li>
+      <li>B,</li>
+      <li>A</li>
+    </ul>
     <script src="konami_code.js"></script>
     <!-- Open this file in the browser and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
