@@ -8,11 +8,12 @@ function init() {
     var key = parseInt(e.detail || e.which);
     if (key === code[index]) {
       index++;
-      if (index === code.length - 1) {
 
+      if (index === code.length - 1) {
         index = 0;
         alert("Congrats!");
       }
+
   } else {
     index = 0;
   }
