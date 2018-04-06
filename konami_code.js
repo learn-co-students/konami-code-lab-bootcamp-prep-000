@@ -12,7 +12,7 @@ function init() {
      index = 0
     }
     if (index === code.length) {
-      window.alert ('congrats bro')
+      window.alert ("congrats bro")
       index = 0
     }    
   })
