@@ -1,6 +1,6 @@
 # Konami Code Lab
 
-## Objectives
+baba## Objectives
 1. Practice using event listeners.
 2. Explain how event listeners are triggered.
 3. Capture user interactions to trigger events on a page.
