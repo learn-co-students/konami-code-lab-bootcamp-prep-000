@@ -24,4 +24,4 @@ function init() {
   document.body.addEventListener('keydown', onKeyDownHandler.bind(this));
 
 }
-init();
+// init();
