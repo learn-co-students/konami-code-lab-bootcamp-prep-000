@@ -1,6 +1,7 @@
 const expect = chai.expect;
 
 describe("index.js", () => {
+  var spy = sinon.stub(window, "alert");
   const codes = [
     "ArrowUp",
     "ArrowUp",
@@ -23,25 +24,21 @@ describe("index.js", () => {
     it("triggers an alert if the right code is entered", () => {
       init();
 
-      var spy = sinon.spy(window.alert);
-
       for (let i = 0, l = codes.length; i < l; i++) {
         triggerKeyDown(codes[i]);
       }
 
-      expect(spy.called);
+      expect(spy.calledWith("Hooray!")).to.be.ok;
     });
 
     it("does not trigger an alert if the wrong code is entered", () => {
       init();
 
-      var spy = sinon.spy(window.alert);
-
       for (let i = 0, l = codes.length; i < l; i++) {
         triggerKeyDown(i);
       }
 
-      expect(spy.notCalled);
+      expect(spy.notCalled).to.equal(true);
     });
   });
 });
