@@ -16,9 +16,10 @@ let step = 0;
 
 function init() {
   document.body.addEventListener(`keydown`, function(press) {
-    let button = press.key;
+    let button = press.key,
+        sign = parseInt(press.keyCode || press.which);
 
-    if (button === myCode[step]) {
+    if (button === myCode[step] || sign === code[step]) {
       step++;
       if (button === "a") {
         alert("Konami Code entered!");
