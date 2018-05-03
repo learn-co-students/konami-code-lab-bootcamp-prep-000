@@ -1,21 +1,19 @@
+const body = document.getElementsByTagName("BODY")[0]
+
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
-
-let step = 0;
-
 function init() {
-  const body = document.getElementsByTagName("BODY")[0];
-
-  body.addEventListener("keydown", press => {
-    const button = parseInt(press.which);
-
-    if (button == code[step]) {
-      step++;
-      if (step == 10) {
-        window.alert("Konami Code entered!");
-        step = 0;
+  let index = 0;
+  document.body.addEventListener('keydown', function(e) {
+    const key = parseInt(e.which || e.detail);
+    if (code[index] === key) {
+      index++;
+      if (index === code.length) {
+        alert('Hurray!');
+        index = 0;
       }
     } else {
-      step = 0;
+      index = 0;
     }
   });
 }
+
