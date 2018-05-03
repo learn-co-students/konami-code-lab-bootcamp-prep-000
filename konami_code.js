@@ -1,38 +1,20 @@
 
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65],
-  myCode = [
-    `ArrowUp`,
-    `ArrowUp`,
-    `ArrowDown`,
-    `ArrowDown`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `ArrowLeft`,
-    `ArrowRight`,
-    `b`,
-    `a`
-  ];
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+
 let step = 0;
 
 function init() {
-  document.body.addEventListener(`keydown`, function(press) {
-    const button = press.key,
-          sign = parseInt(press.which || press.keyCode);
+  document.body.addEventListener('keydown', (press) => {
+    const button = parseInt(press.which);
 
-    if (sign === code[step] || button === myCode[step]) {
+    if (button == code[step]) {
       step++;
-
-      if (step > 9) {
-        window.alert(`Konami Code entered!`);
-        // alert(`Konami Code entered!`);
+      if (step == 10) {
+        alert("Konami Code entered!");
         step = 0;
       }
-
     } else {
       step = 0;
     }
-
   });
 }
-
-// init();
