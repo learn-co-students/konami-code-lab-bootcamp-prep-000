@@ -1,16 +1,27 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65];
+const codes = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a"
+];
 
 function init() {
   let index = 0;
 
-  document.body.addEventListener('keydown', function(e) {
-    const key = parseInt(e.which || e.detail);
+  document.body.addEventListener("keydown", function(e) {
+    const key = e.key;
 
-    if (code[index] === key) {
+    if (codes[index] === key) {
       index++;
 
       if (index === code.length) {
-        alert('Hurray!');
+        alert("Hurray!");
 
         index = 0;
       }
