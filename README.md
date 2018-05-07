@@ -6,16 +6,27 @@
 3. Capture user interactions to trigger events on a page.
 
 ## Instructions
-In `konami_code.js`, you'll notice that we've provided very little: well, just about nothing except -- what's that? If you open the file up in your text editor, you should see:
+In `konami_code.js`, you'll notice that we've provided very little: well, nothing except -- what's that? If you open the file up in your text editor, you should see:
 ```js
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const codes = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a"
+];
 
 function init() {
   // your code here
 }
 ```
 
-But what could those numbers be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as keyboard event values. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
+But what could those keycodes be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as javascript KeyboardEvent keys. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
 
 In `index.html`, you'll see that we're loading the file in for you:
 ```html
@@ -30,15 +41,15 @@ When you're testing the code out in the browser, be sure to call `init()` to att
 
 Stuck on how to get started? Here's a contrived, short example:
 ```js
-// Key codes for A, B, and C keys.
-const alphabet = [65, 66, 67];
+// Keys for A, B, and C keys.
+const alphabet = ['a', 'b', 'c'];
 
 // Keep track of index outside of the event handler.
 let index = 0;
 
 // This is the function that would be invoked by the event listener.
 function onKeyDownHandler(e) {
-  const key = parseInt(e.detail || e.which);
+  const key = e.key;
 
   if (key === alphabet[index]) {
     index++;
@@ -57,14 +68,15 @@ function onKeyDownHandler(e) {
 Have fun!
 
 ## Hints
-Be aware that we're looking at both `e.detail` and `e.which`. In modern browsers, `e.which` is usually sufficient; however, it's not universally supported, it's technically deprecated, and it sometimes exhibits finicky behavior in the test suite. To be safe, you might want to check `e.detail` or `e.location`. Or, to be safest, read the latest in the [`keydown` reference on MDN][keydown]. This would be a good chance to use `console.log()` to check out the value of `e.detail`, `e.which`, and `e.location`.
+`KeyboardEvent` has gotten lots of recent updates. The `key` and `code` properties recently replaced `which`, `keyCode`, and `charCode` properties, which were often implemented slightly differently between different browsers and would report different values across different operating systems. Some environments (node in particular) don't know about `KeyboardEvent`
 
-Also note that we're calling `parseInt` on the key value. This is because the event handler might pass us the string representation of the number, which wouldn't work so well with our comparisons.
 
 ## Resources
 - [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
+- [MDN - KeyboardEvent][KeyboardEvent]
 - [MDN — keydown][keydown]
 
 [keydown]: https://developer.mozilla.org/en-US/docs/Web/Events/keydown
+[KeyboardEvent]: https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/konami-code-lab'>Konami Code Lab</a> on Learn.co and start learning to code for free.</p>
