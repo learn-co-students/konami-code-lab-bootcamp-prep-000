@@ -1,4 +1,15 @@
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const konamicode = [
+"ArrowUp",
+"ArrowUp",
+"ArrowDown",
+"ArrowDown",
+"ArrowLeft",
+"ArrowRight",
+"ArrowLeft",
+"ArrowRight",
+"b",
+"a"
+]
 
 function init() {
   let index = 0;
@@ -8,18 +19,18 @@ function init() {
   function checkKeyDown(e) {
     const key = e.key;
 
-    if (key === code[index]) {
+    if (key === konamicode[index]) {
       index++;
 
-      if (index === code.length) {
+      if (index === konamicode.length) {
         alert('Good job!');
       }
-        index = 0;
+      
     } else {
       index = 0;
     }
 
-    console.log('key pressed');
-    console.log(index);
+    console.log('index: ' + index);
+    console.log('key: ' + key);
   }
 }
