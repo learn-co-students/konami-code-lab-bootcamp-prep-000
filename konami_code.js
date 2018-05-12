@@ -11,22 +11,26 @@ const codes = [
   "a"
 ];
 
-let index = 0;
 
- document.querySelector('body').addEventListener('keydown', init);
+function init() {
+  let index = 0;
 
-function init(e) {
-  const key = e.key;
- 
-  if (key === codes[index]) {
-    index++;
+  document.body.addEventListener("keydown", (e) => {
+    const key = e.key;
+    
+    index = (codes[index] === key) ? ++index : 0;
     
     if (index === codes.length) {
-      alert('Hurray!');
-      
+      window.alert("Hurray!");
       index = 0;
     }
-  } else {
-    index = 0;
-  }
+    
+  });
 }
+  
+
+
+
+
+
+
