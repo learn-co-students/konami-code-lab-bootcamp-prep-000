@@ -11,6 +11,19 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
+let idx = 0;
+function init(e) {
+  const key = e.key;
+  
+  if(key === codes[idx]){
+    idx++;
+    
+    if(idx === codes.length){
+      alert("Congrats!");
+      
+      idx = 0;
+    }
+  } else {
+    idx = 0;
+  }
 }
