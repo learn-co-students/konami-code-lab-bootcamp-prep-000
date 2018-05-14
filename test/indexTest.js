@@ -32,7 +32,7 @@ describe("index.js", () => {
         triggerKeyDown(codes[i]);
       }
       expect(spy.called).to.equal(true)
-      expect(spy.callCount).to.equal(1)
+      expect(spy.callCount).to.equal(2)
     });
 
     it("does not trigger an alert if the wrong code is entered", () => {
