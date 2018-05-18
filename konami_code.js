@@ -11,6 +11,20 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
+let index = 0;
+
+var body = document.querySelector('body')
+body.addEventListener('keydown', init)
+
+function init(e) {
+  var key = e.key;
+  if(key === codes[index]) {
+    index++;
+    if(index === codes.length) {
+      alert('Yipee!');
+      index = 0;
+    } else {
+      index = 0;
+    }
+  }
 }
