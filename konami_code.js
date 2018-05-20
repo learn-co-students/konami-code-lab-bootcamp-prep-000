@@ -29,7 +29,7 @@ function konamiCode(e) {
   
   if (typedKey === codes[index]){
     index++;
-    
+    // console.log(index);
     if(index === codes.length) {
       alert('Congratulations! You entered the Konami Code! Now you have 30 extra lives (just kidding).');
       
