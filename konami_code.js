@@ -1,3 +1,6 @@
+
+let index = 0;
+
 const codes = [
   "ArrowUp",
   "ArrowUp",
@@ -12,5 +15,15 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+    document.body.addEventListener('keydown', (event) => {
+
+    const keyName = event.key;
+   
+    keyName === codes[index] ? index++ : index = 0;
+
+    if (index === 10){
+      alert('God Mode Active');
+    }
+  });
+
 }
