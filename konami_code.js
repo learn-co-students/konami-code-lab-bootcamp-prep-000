@@ -12,5 +12,20 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  function konami(e) {
+    var codescopy = codes
+    while(e.key == codescopy[0]) {
+      codescopy.shift()
+      if (codescopy.length === 0) {
+      alert('Congrats!')
+    }
+    else {
+      codescopy = codes
+    }
+    }
+  }
+
+
+    
+    document.body.addEventListener('keydown', konami)
 }
