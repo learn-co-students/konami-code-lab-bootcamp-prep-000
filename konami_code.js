@@ -11,6 +11,17 @@ const codes = [
   "a"
 ];
 
+var index = 0;
+var body = document.querySelector('body');
 function init() {
-  // your code here
-}
+  body.addEventListener('keydown',function(e) {
+    if (e.key === codes[index]) {
+      index++;
+       if (index===codes.length) {
+         alert("You did it!");
+         index = 0;
+       }
+    } else {
+      index = 0;
+    }
+  })}
