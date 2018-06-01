@@ -1,7 +1,22 @@
-document.body.addEventListener('keydown', function konamiTest(press) {
+const codes = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "b",
+  "a"
+];
+
+let userInput = [];
+
+document.body.addEventListener('keydown', function konamiCode(press) {
     // Initialize input array and fidelity counter
-    let userInput = press.key;
-    let fidelity = 0
+    userInput.push(press.key);
+    let fidelity = 0;
 
     // Check user input for fidelity against Konami code
     if (codes.length === userInput.length) {
@@ -11,7 +26,7 @@ document.body.addEventListener('keydown', function konamiTest(press) {
         } else if (codes[i] !== userInput[i]) {
             fidelity = 0;
             codes.shift();
-            return false;
+            break;
         }
       }
     }
