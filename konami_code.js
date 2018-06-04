@@ -18,16 +18,13 @@ function init() {
     var press = e.key;
     if (string === press) {
       console.log(string);
-    count++;
-     if (count === codes.length) {
-      alert('Hurray!');
-      count = 0;
-    }
+      count++;
+      if (count === codes.length) {
+        alert('Hurray!');
+        count = 0;
+      }
     } else {
       count = 0;
       }
   } )
 }
-    
-
-
