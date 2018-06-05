@@ -17,10 +17,10 @@ let index = 0 ;
 
   const key = e.key;
 
-  if(key == codes[index]){
+  if(key === codes[index]){
     index++;
   //    alert(index));
-    if(index==codes.length){
+    if(index === codes.length){
       alert("wtf u find my password!");
       index = 0;
     }
