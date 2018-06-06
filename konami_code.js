@@ -20,6 +20,7 @@ function init() {
     if (keyName === codes[counter]) {
       counter +=1
       if (counter === codeLength) {
+        counter = 0
         alert('yay')
         return
       }
