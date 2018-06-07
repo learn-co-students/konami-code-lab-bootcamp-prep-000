@@ -13,27 +13,30 @@ const codes = [
 
 function init() {
   // set up a page listener
-  var listener = document.addEventListener("keydown", checkKeys)
+  var listener = window.addEventListener("keydown", checkKeys)
+  
+  // set up a counter
+  count = 0
 }
 
 function checkKeys()
 {
-  var keyPressed = event.key;
-  
-  console.log(`Keypress Detected: ${keyPressed}`)
-  
-  var count = 0
+  var keyPressed = event.key
   
   // begin the game
   if(keyPressed === codes[count])
   {
     count++
+    console.log(`Correct! ${keyPressed}, count: ${count}`)
+    
+    if(count === codes.length)
+    {
+      console.log("Secret Code Unlocked: GOD MODE is ON!!")
+      count = 0
+    }
   }
   else
   {
     count = 0
   }
-  
-  
-  
 }
