@@ -13,7 +13,9 @@ const codes = [
 
 function init() {
   // set up a page listener
-  var listener = window.addEventListener("keydown", checkKeys)
+  // tests were looking for the target at document.body
+  // so window._ didn't work.
+  var listener = document.body.addEventListener("keydown", checkKeys)
   
   // set up a counter
   count = 0
@@ -31,7 +33,7 @@ function checkKeys()
     if(count === codes.length)
     {
       //console.log("Secret Code Unlocked: GOD MODE is ON!!")
-      window.alert("Secret Code Unlocked: GOD MODE is ON!!");
+      window.alert("Secret Code Unlocked: GOD MODE is ON!!")
       count = 0
     }
   }
