@@ -27,7 +27,11 @@ function checkKeys()
   // begin the game
   if(keyPressed === codes[count])
   {
-    
+    count++
+  }
+  else
+  {
+    count = 0
   }
   
   
