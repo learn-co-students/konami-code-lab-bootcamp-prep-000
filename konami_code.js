@@ -19,7 +19,7 @@ function init() {
   function onKeyDownHandler(e) {
     
     const key = e.key;
-    console.log(key + progress);
+    //console.log(key + progress);
       
     if(key === codes[progress]) 
       progress++;
