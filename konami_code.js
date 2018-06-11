@@ -11,6 +11,14 @@ const codes = [
   "a"
 ];
 
+
+
 function init() {
-  // your code here
+ 
+  function triggerKeyDown(e) {
+    const keyboardEvent = e.keyboardEvent;
+    document.body.dispatchEvent(keyboardEvent);
+    for(let i = 0; i < codes.length; i++)
+       triggerKeyDown(codes[i])
+  }
 }
