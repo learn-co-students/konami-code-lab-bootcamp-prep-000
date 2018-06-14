@@ -18,12 +18,10 @@ function init() {
 
   body.addEventListener('keydown', function(e){
     console.log("apretaste una tecla")
-    var k = e.k;
-    console.log(k)
-    console.log(codes[index])
+    var k = e.key;
+    
     if(k === codes[index]){
       index++;
-      console.log('primer IF')
       if(index === codes.length){
         console.log("Congratulations, WUJUUU!!!")
         index = 0;
