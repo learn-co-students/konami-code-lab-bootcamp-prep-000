@@ -13,4 +13,9 @@ const codes = [
 
 function init() {
   // your code here
+  var body = document.querySelector(body)
+  
+  body.addEventListener('keyDown', function(e){
+    
+  })
 }
