@@ -22,7 +22,71 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  function onKeyPress(e){
+   if(onArrowUp){
+     if(onArrowUp){
+       if(onArrowDown){
+         if(onArrowDown){
+           if(onArrowLeft){
+             if(onArrowRight){
+               if(onArrowLeft){
+                 if(onArrowRight){
+                   if(onKeyB){
+                     if(onKeyA){
+                       alert("Hurray!");
+                     }
+                   }
+                 }
+               }
+             }
+           }
+         }
+       }
+     }
+   }
+  }
+  function onArrowUp(e){
+    key = e.key;
+    if(key === "ArrowUp"){
+    return true
+    }
+    return false
+  }
+  function onArrowDown(e){
+    key = e.key;
+    if(key === "ArrowDown"){
+      return true
+    }
+    return false
+  } 
+  function onArrowLeft(e){
+    key = e.key;
+    if(key === "Arrowleft"){
+      return true
+    }
+    return false
+  }
+  function onArrowRight(e){
+    key = e.key;
+    if(key === "ArrowRight"){
+      return true
+    }
+    return false
+  }
+  function onKeyB(e){
+    key = e.key;
+    if(key === "b"){
+      return true
+    }
+    return false
+  }
+  function onKeyA(e){
+    key = e.key;
+    if(key === "a"){
+      return true
+    }
+    return false
+  }
 }
 ```
 
