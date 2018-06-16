@@ -10,7 +10,29 @@ const codes = [
   "b",
   "a"
 ];
-
+  
+let index = 0;
+  
 function init() {
-  // your code here
+ 
+  document.body.addEventListener('keydown', function(e) {
+    
+    var input = e.key;
+  
+    if (input === codes[index]) {
+    
+      index ++;
+    
+    if (index === codes.length) {
+     
+     alert('Konami Code For Life!!!!!');
+      
+      index = 0;
+      
+
+      
+  }
+}
+
+});
 }
