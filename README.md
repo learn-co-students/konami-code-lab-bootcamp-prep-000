@@ -1,4 +1,4 @@
-# Konami Code Lab
+bit# Konami Code Lab
 
 ## Objectives
 1. Practice using event listeners.
@@ -22,7 +22,7 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  
 }
 ```
 
