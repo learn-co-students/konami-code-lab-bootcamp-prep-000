@@ -8,12 +8,43 @@
   </head>
 
   <body>
-    <script src="konami_code.js"></script>
+    <p>KonamiCode</p>
+    <br>
+    <p>38, 38, 40, 40, 37, 39, 37, 39, 66, 65<br>
+    <div id='demo' onkeydown='logger()' >
+      this is for loggin'
+    </div>
+// ▒▒▒▒▒▄██████████▄▒▒▒▒▒ F
+<br>
+// ▒▒▒▄██████████████▄▒▒▒ A
+<br>
+// ▒▒██████████████████▒▒ D
+<br>
+// ▒▐███▀▀▀▀▀██▀▀▀▀▀███▌▒ E
+<br>
+// ▒███▒▒▌■▐▒▒▒▒▌■▐▒▒███▒ D
+<br>
+// ▒▐██▄▒▀▀▀▒▒▒▒▀▀▀▒▄██▌▒ G
+<br>
+// ▒▒▀████▒▄▄▒▒▄▄▒████▀▒▒ O
+<br>
+// ▒▒▐███▒▒▒▀▒▒▀▒▒▒███▌▒▒ R
+<br>
+// ▒▒███▒▒▒▒▒▒▒▒▒▒▒▒███▒▒ I
+<br>
+// ▒▒▒██▒▒▀▀▀▀▀▀▀▀▒▒██▒▒▒ L
+<br>
+// ▒▒▒▐██▄▒▒▒▒▒▒▒▒▄██▌▒▒▒ L
+<br>
+// ▒▒▒▒▀████████████▀▒▒▒▒ A
+
+      <script src="konami_code.js"></script>
     <!-- Open this file in the browser and call `mocha.run()` in console to run tests -->
     <div id="mocha"></div>
     <script src="node_modules/mocha/mocha.js"></script>
     <script src="node_modules/expect/umd/expect.min.js"></script>
     <script>mocha.setup('bdd');</script>
     <script src="test/index-test.js"></script>
+
   </body>
 </html>
