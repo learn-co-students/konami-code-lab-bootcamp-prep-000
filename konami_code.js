@@ -12,9 +12,22 @@ const codes = [
 ];
 
 function init() {
- const alphabet = ['a', 'b', 'c'];
- for (let index = 0; index , init.length; i++){
- init(index).addEventListener('keydown', bubble, true)  
- // your code here
+const alphabet = ['a', 'b', 'c'];
+let index = 0;
+function onKeyDownHandler(e){
+  const key = e.key;
+  
+  if (key === alphabet[index]){
+    index++;
+  
+  if (index === alphabet.length){
+    alert('Hurray');
+  }
+  }else{
+    index = 0;
+  }
 }
+  }
+  }
+  }
 }
