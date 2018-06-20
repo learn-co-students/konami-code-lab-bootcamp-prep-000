@@ -10,7 +10,37 @@ const codes = [
   "b",
   "a"
 ];
+function konami(){
+  window.alert('congratulatory message')
+}
+
+function nope(){
+  window.alert('nope message')
+}
 
 function init() {
   // your code here
+  var doc = document.body
+  var newcode = []
+  doc.addEventListener('keydown', function(e) {
+    const key = event.key
+    newcode.push(key)
+    if (newcode.length == codes.length){
+      if(newcode == codes){
+        konami()
+      }
+      else {
+        nope()
+        newcode.length = 0
+      }
+    }else {
+      nope()
+      newcode.length = 0
+    }
+
+  // if (e.which === 71) {
+  //   return e.preventDefault()
+  }
+})
+
 }
