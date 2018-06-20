@@ -12,5 +12,9 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+ const alphabet = ['a', 'b', 'c'];
+ for (let index = 0; index , init.length; i++){
+ init(index).addEventListener('keydown', bubble, true)  
+ // your code here
+}
 }
