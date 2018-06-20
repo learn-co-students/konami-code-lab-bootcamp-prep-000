@@ -20,11 +20,13 @@ function nope(){
 
 function init() {
   // your code here
-  var doc = document.body
+  var doc = document.getElementsByTagName('body')
   var newcode = []
   doc.addEventListener('keydown', function(e) {
-    const key = event.key
+  // function onKeyDownHandler(e){
+    const key = e.keyCode
     newcode.push(key)
+    console.log(key)
     if (newcode.length == codes.length){
       if(newcode == codes){
         konami()
