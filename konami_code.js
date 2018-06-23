@@ -37,6 +37,7 @@ function init() {
   }
      else{
        console.log(e.which)
+       nope()
        index=0
      }
 
