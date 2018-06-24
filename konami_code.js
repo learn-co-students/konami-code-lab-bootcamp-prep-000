@@ -21,11 +21,12 @@ document.body.addEventListener('keydown', function konamiCode(press) {
     userInput = (press.key);
 
     // Check user input for fidelity against Konami code
-        if (codes[fidelity] === userInput) {
-            fidelity++;
-        } else if (codes[fidelity] !== userInput) {
-            fidelity = 0;
-        }
+    if (codes[fidelity] === userInput) {
+        fidelity++;
+    } else if (codes[fidelity] !== userInput) {
+        fidelity = 0;
+        userInput = "";
+    }
 
     // Check fidelity count of array comparison and alert the user if successful
     if (fidelity === codes.length) {
