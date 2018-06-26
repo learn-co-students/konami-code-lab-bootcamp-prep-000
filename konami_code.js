@@ -21,28 +21,29 @@ function nope(){
 function init() {
   // your code here
 var back = document.querySelector("body");
-  back.addEventListener('keydown',function(e){
-  var key = parseInt(e.which || e.detail)
-
-  var index=0
-
-      if(key === codes[index]){
-      index++
-
-
-      if(index === code.length){
-       konami()
-       index=0
-     }
+var thecode = []
+back.addEventListener('keydown', function(event) {
+   thecode.push(event.code)
+  })
+if (thecode.length == codes.length){
+  //Checking for KeyA and KeyB
+  for(var i = 0; i<thecode.length;i++){
+    if (thecode[i]=="KeyA"){
+      thecode[i] = "a"
+    }else if (thecode[i]=="KeyB"){
+      thecode[i] = "b"
+    } else{
+    }
+  }//End of checking
+//Check to see if the codes and codes match
+  if (thecode == codes){
+    konami()
+    thecode.length = 0
+  } else {
+    nope()
+    thecode.length = 0
   }
-     else{
-       console.log(e.which)
-       nope()
-       index=0
-     }
-
-
-
+}
 
 
   // var doc = document.getElementsByTagName('body')
