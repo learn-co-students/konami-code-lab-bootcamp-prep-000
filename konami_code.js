@@ -20,8 +20,8 @@ function nope(){
 
 function init() {
   // your code here
-
-  document.body.addEventListener('keydown',function(e){
+var back = document.querySelector("body");
+  back.addEventListener('keydown',function(e){
   var key = parseInt(e.which || e.detail)
 
   var index=0
