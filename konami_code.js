@@ -14,20 +14,20 @@ const codes = [
 function init() {
   let index = 0;
   
-  document.addEventListener('keydown', (event) => {
+  document.querySelector('body').addEventListener('keydown', (event) => {
   const keyName = event.key;
   if(keyName === codes[index])
   {
     index++;
+    if(index === codes.length)
+    {
+      alert('Hurray!');
+      index = 0;
+    }
   }
   else
   {
     index = 0;
   }
-  if(index === codes.length)
-  {
-    alert('Hurray!');
-    index = 0;
-  }
-});
+}, false);
 }
