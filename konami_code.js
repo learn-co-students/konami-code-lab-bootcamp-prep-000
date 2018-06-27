@@ -22,12 +22,13 @@ function nope(){
 }
 
 
-
-
-
-
 function init() {
   // your code here
+back.addEventListener('keydown',function(event){
+
+})
+
+
 back.addEventListener('keydown', function(event) {
    thecode.push(event.code)
 
