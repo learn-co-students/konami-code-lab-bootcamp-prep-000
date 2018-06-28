@@ -42,7 +42,11 @@ function theverdict(){
 		}
 	}
 }
-
+function cleanslate(){
+  truth = 0
+  wrong = 0
+  thecode.length = 0
+}
 function init() {
 	// your code here
 	back.addEventListener('keydown',function(event){
@@ -52,51 +56,16 @@ function init() {
 		theverdict()
 		if (truth == 10){
 			alert('konami wins')
+      cleanslate()
 		} else {
-			alert('this is 10')
+			alert('wrong code')
+      cleanslate()
 		}
-		thecode.length = 0
+
 	}
 
-})}
+})
 
-//back.addEventListener('keydown', function(event) {
-//	 thecode.push(event.code)
-//
-//	 if (thecode.length == 10){
-		 //Checking for KeyA and KeyB
+}
 
-//		 for(var i = 0; i<thecode.length;i++){
-//			 if (thecode[i]=="KeyA"){
-//				 thecode[i] = "a"
-//			 }else if (thecode[i]=="KeyB"){
-//				 thecode[i] = "b"
-//			 } else{
-//				 console.log("otherchar")
-//
-//			 }//End of checking
-//			alert("this is at 10");
-//			thecode.length = 0
-//		 }
-		 //Checking for right code
-//		 for (var i = 0; i<thecode.length;i++){
-//			 if (thecode[i]==codes[i]){
-//		 	truth = truth+ 1
-//			 }else {
-//				 console.log (codes[i]+" is false")
-//			 }
-//		 }
-//		 //end of checking for truth
-//		 if(truth == 10){
-//			 konami()
-//			 thecode.length = 0
-//			 truth = 0
-//		 }else {
-//			 thecode.length = 0
-//			 truth = 0
-//		 }
-//	})
-//end of addEventListener
-//}//end of init()
-// }
 init()
