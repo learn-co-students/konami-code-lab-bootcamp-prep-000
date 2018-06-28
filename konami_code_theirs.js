@@ -1,4 +1,4 @@
-const code = [
+\*const code = [
   38,
   38,
   40,
