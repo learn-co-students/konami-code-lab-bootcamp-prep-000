@@ -15,11 +15,11 @@ var thecode = []
 var truth = 0
 var wrong = 0
 function konami(){
-	return window.alert('congratulatory message')
+	return alert('congratulatory message')
 }
 
 function nope(){
-	return window.alert('nope message')
+	return alert('nope message')
 }
 
 function keychange(){
@@ -50,18 +50,19 @@ function cleanslate(){
 function init() {
 	// your code here
 	back.addEventListener('keydown',function(event){
-	thecode.push(event.code)
+	thecode.push(event.key)
 	keychange()
 	if(thecode.length == 10){
 		theverdict()
 		if (truth == 10){
-			alert('konami wins')
+			// alert('konami wins')
+      konami()
       cleanslate()
 		} else {
-			alert('wrong code')
+			// alert('wrong code')
+      nope()
       cleanslate()
 		}
-
 	}
 
 })
