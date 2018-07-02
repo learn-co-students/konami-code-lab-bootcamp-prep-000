@@ -2,8 +2,6 @@ const expect = chai.expect;
 
 describe("index.js", () => {
 
-  var spy = sinon.stub(window, "alert");
-
   const codes = [
     "ArrowUp",
     "ArrowUp",
