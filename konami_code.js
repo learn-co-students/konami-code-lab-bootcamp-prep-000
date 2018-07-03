@@ -10,63 +10,36 @@ const codes = [
 	"b",
 	"a"
 ];
-var back = document.querySelector("body")
-var thecode = []
-var truth = 0
-var wrong = 0
-function konami(){
-	return alert('congratulatory message')
-}
 
-function nope(){
-	return alert('nope message')
-}
-
-function keychange(){
-	for(var i = 0; i<thecode.length;i++){
-		if (thecode[i] == "KeyA"){
-			thecode[i] = "a"
-		}else if (thecode[i] == "KeyB"){
-			thecode[i] = "b"
-		}
-	else{
-		console.log(thecode[i])
-	}}
-}
-function theverdict(){
-	for(var i = 0; i<thecode.length;i++){
-		if (thecode[i] == codes[i]){
-			truth = truth + 1
-		} else{
-			wrong = wrong + 1
-		}
-	}
-}
-function cleanslate(){
-  truth = 0
-  wrong = 0
-  thecode.length = 0
-}
+var enteredCode = []//Code that's entered
+var theBodyTag = document.querySelector("body")
+var correctCodeInput = 0 //How many code inputs was entered correctly
 function init() {
 	// your code here
-	back.addEventListener('keydown',function(event){
-	thecode.push(event.key)
-	keychange()
-	if(thecode.length == 10){
-		theverdict()
-		if (truth == 10){
-			// alert('konami wins')
-      konami()
-      cleanslate()
-		} else {
-			// alert('wrong code')
-      nope()
-      cleanslate()
+	theBodyTag.addEventListener('keydown',function(event){
+		//checking for correct code entered when it's enough to check to see if is correct
+		if (enteredCode.length === 10){
+			for(var i = 0; i<enteredCode.length;i++){
+				if (enteredCode[i] == codes[i]){
+					correctCodeInput = correctCodeInput + 1
+					// console.log(enteredCode[i]+" is correct")
+				} else{
+					enteredCode.length = 0 //clears the code if entered incorrect
+					correctCodeInput = 0
+					// console.log("incorrect code")
+				}
+			} //end for loop to check for correct code
+			while (correctCodeInput == 10){
+				// console.log ("correct code")
+				alert("Hurray!")
+				correctCodeInput = 0
+				enteredCode.length = 0
+			}
+		}else {
+			enteredCode.push(event.key) //pushes entered Code into an array (enteredCode)
+			console.log(enteredCode)
 		}
-	}
-
-})
-
+	})
 }
 
 init()
