@@ -8,9 +8,35 @@ const codes = [
   "ArrowLeft",
   "ArrowRight",
   "b",
-  "a"
-];
+  "a" 
+]; 
 
-function init() {
+function init() { 
   // your code here
+ var index = 0;
+	document.body.addEventListener('keydown', (e) => {
+		var key = e.key;
+		
+		if (codes[index] === key) {
+			++index;
+
+			if (index === codes.length) {
+		    alert("Hurray!");
+				index = 0;
+			} 
+		} else {
+		  index = 0;
+		}
+	});
 }
+ 
+	
+	 
+		
+	
+
+
+
+
+  
+
