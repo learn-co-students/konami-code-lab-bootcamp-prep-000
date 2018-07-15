@@ -17,23 +17,25 @@ function init() {
 
   let index = 0;
 
-  var e = new KeyboardEvent();
-  document.body.dispatchEvent(e);
+  //var e = new KeyboardEvent();
+  document.body.addEventListener("keydown", function(e){
 
-  const keydown = e.keydown;
+    const keydown = e.key;
 
-  if (keydown == codes[index]){
-    index++;
+    if (keydown == codes[index]){
+      index++;
 
-    if (index === codes.length){
-      alert("Hurray!");
+      if (index === codes.length){
+        alert("Hurray!");
 
+        index = 0;
+
+      }
+
+    } else {
       index = 0;
-
     }
-
-  } else {
-    index = 0;
-  }
+  });
+  //document.body.dispatchEvent(e);
 
 }
