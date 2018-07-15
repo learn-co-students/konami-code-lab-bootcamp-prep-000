@@ -22,9 +22,28 @@ const codes = [
 ];
 
 function init() {
-  // your code here
-}
-```
+var index = 0
+  document.body.addEventListener('keydown', onKeyDownHandler);
+
+  function onKeyDownHandler(e) {
+    const key = parseInt(e.detail || e.which)
+    console.log('key', key)
+    if (key === code[index]) {
+      index++
+
+      if (index === code.length) {
+        alert("YOU DID IT!")
+        index = 0
++      }
++    } else {
++      index = 0
++    }
++  }
+ }	 }
++
++
++
++init();
 
 But what could those keycodes be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as JavaScript KeyboardEvent keys. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
 
