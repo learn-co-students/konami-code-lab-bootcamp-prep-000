@@ -17,7 +17,6 @@ function init() {
 
   let index = 0;
 
-  //var e = new KeyboardEvent();
   document.body.addEventListener("keydown", function(e){
 
     const keydown = e.key;
@@ -36,6 +35,5 @@ function init() {
       index = 0;
     }
   });
-  //document.body.dispatchEvent(e);
 
 }
