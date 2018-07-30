@@ -9,7 +9,8 @@ function init() {
     pressed.push(key);
     pressed = pressed.length > 10 ?  pressed.slice(pressed.length - 10, pressed.length) : pressed;
 
-    if(pressed === code){
+    console.log(pressed.join(","), code.join(","), pressed.join(",") === code.join(","))
+    if(pressed.join(",") === code.join(",")){
       alert("whoopie")
     }
   }
