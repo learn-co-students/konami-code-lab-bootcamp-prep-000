@@ -20,7 +20,7 @@ function init() {
   let key = e.key;
     if (key === codes[i]) {
       i++;
-      if (i === codes.length) {
+      if (i === codes.length - 1) {
         alert('Congratulations!');
         i = 0;
       }
