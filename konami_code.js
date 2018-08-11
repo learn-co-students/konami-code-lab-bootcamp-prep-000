@@ -20,13 +20,15 @@ function init() {
   let key = e.key;
     if (key === codes[i]) {
       i++;
-      if (i === codes.length - 1) {
+      if (i === codes.length) {
         alert('Congratulations!');
         i = 0;
       }
     }else {
       i = 0;
     }
+      return index;
   });
+
 }
 init();
