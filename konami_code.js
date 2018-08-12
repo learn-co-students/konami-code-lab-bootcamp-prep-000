@@ -18,10 +18,8 @@ function init() {
 
     if (key === codes[index]) {
       index++;
-      console.log(index)
       if (index === codes.length) {
         alert("Hurray!");
-        console.log("Should have gotten an alert")
         index = 0;
       }
     } else {
