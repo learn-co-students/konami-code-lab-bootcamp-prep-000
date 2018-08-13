@@ -9,28 +9,21 @@ const codes = [
   "ArrowRight",
   "b",
   "a"
-];
+]
 
 function init() {
-  
-  let index = 0;
-    
-  function onKeyDownHandler(e) {
-  const key = e.key;
- 
-  if (key === codes[index]) {
-    index++;
- 
-    if (index === codes.length) {
-      alert("Hurray!");
- 
-      index = 0;
+  let i = 0
+  function onKeydown(e) {
+    const key = e.key
+    if (key === codes[i]) {
+      i++;
+      if (i === codes.length) {
+        alert("KONAMI!!!");
+        i = 0
+      }
+    } else {
+      i = 0
     }
-  } else {
-    index = 0;
   }
-}
-
-document.body.addEventListener('keydown', onKeyDownHandler);
-
+document.body.addEventListener('keydown', onKeydown)
 }
