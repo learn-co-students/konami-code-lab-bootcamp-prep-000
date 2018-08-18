@@ -11,7 +11,7 @@ const codes = [
   "a"
 ];
 
-var code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 var index = 0;
 
 function init() {
@@ -19,20 +19,18 @@ function init() {
   var body = document.body
   
   body.addEventListener('keydown', function(e) {
-    var key = parseInt(e.detail || e.which)
+    var key = parseInt(e.detail || e.key)
     
-    if(key === code[index]) {
+    if(key === konamiCode[index]) {
       index++
       
-      if(index === code.length -1) {
-        index = 0
+      if(index === konamiCode.length -1) {
         
-        alert("Contrats!")
+        alert("Hurray!")
+        index = 0
       } else {
         index = 0
       }
     }
   })
 }
-
-init()
