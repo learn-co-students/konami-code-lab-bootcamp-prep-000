@@ -11,15 +11,23 @@ const codes = [
   "a"
 ];
 
-const konamiCode = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-var index = 0;
-
 function init() {
   // your code here
-  var body = document.body
+  var body = document.querySelector('body')
+  var index = 0
   
   body.addEventListener('keydown', (event) => {
     const keyName = event.key;
-    alert('keydown event\n\n' + 'key: ' + keyName);
+    
+    if(keyName === codes[index]) {
+      index++
+      
+      if(index === codes.length) {
+        window.alert("HURRAY!")
+        index = 0
+      }
+    } else {
+      index = 0
+    }
   });
 }
