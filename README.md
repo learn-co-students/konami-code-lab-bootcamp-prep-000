@@ -1,4 +1,4 @@
-# Konami Code Lab
+http# Konami Code Lab
 
 ## Objectives
 1. Practice using event listeners.
@@ -21,9 +21,7 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
-}
+
 ```
 
 But what could those keycodes be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as JavaScript KeyboardEvent keys. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
