@@ -8,7 +8,8 @@
 ## Instructions
 In `konami_code.js`, you'll notice that we've provided very little: well, nothing except -- what's that? If you open the file up in your text editor, you should see:
 ```js
-const codes = [
+
+const konamiCodes = [
   "ArrowUp",
   "ArrowUp",
   "ArrowDown",
@@ -20,6 +21,7 @@ const codes = [
   "b",
   "a"
 ];
+
 
 function init() {
   // your code here
