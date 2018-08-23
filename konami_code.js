@@ -14,28 +14,21 @@ const codes = [
 
 
 
-const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-
 function init() {
-  const body = document.getElementsByTagName("BODY")[0]
-  let clickPattern = []
-
-  body.addEventListener('keydown', function(e) {
-    const key = parseInt(e.detail || e.which)
-    clickPattern.push(key)
-
-    for (let i = 0; i < clickPattern.length; i++){
-      if (clickPattern[i] != code[i]){
-        clickPattern = []
-        break;
+let index = 0
+  document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
+  
+  if (keyName === codes[index] ) {
+    index++;
+    
+      if (index === codes.length) {
+        alert("Hurray!");
+        index = 0;
       }
+    } else {
+    index = 0;
     }
-
-    if (clickPattern.length === code.length){
-      alert('you got it')
-      clickPattern = []
-    }
-
-  })
+  } );
 
 }
