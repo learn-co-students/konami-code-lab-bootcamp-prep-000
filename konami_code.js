@@ -20,16 +20,12 @@ let index = 0
     index++;
     
       if (index === codes.length) {
-        window.alert("Hurray!");
-        
+        alert("Hurray!");
         index = 0;
       }
-  } else {
+    } else {
     index = 0;
-  }
-  
-} );
-
-
+    }
+  } );
 }
 
