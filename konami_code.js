@@ -1,3 +1,5 @@
+
+
 const codes = [
   "ArrowUp",
   "ArrowUp",
@@ -15,12 +17,13 @@ function init() {
   // your code here
   let index = 0;
   
-  document.addEventListener('keydown', (e) => {
+  document.body.addEventListener('keydown', (e) => {
     var keyPressed = e.key;
     if (keyPressed === codes[index]){
       index += 1;
       if (index === codes.length){
-        window.alert('Hurray!');
+        alert("Hurray!");
+        console.log('worked');
         index = 0;
       }
     }else{
