@@ -13,17 +13,20 @@ const codes = [
 
 function init() {
   var index = 0;
-  document.addEventListener('keydown', Function (e) {
+  document.addEventListener('keydown', function (e) {
     var key = e.key;
+  console.log(key===codes[index])
     if (key === codes[index]){
-      index++
-      
-      if (index === codes.length-1){
-        alert('Secret Solved!')
+      ++index 
+      console.log('index',index)
+      if (index === codes.length){
+        window.alert('Secret Solved!')
         index = 0;
-      }
-      } else {
+        console.log('index2',index)
+      } 
+         } else {
         index = 0
       }
 })
 }
+init()
