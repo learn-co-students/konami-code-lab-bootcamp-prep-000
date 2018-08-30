@@ -20,9 +20,27 @@ const codes = [
   "b",
   "a"
 ];
+conole.log("Hello World")
+var index = 0
 
 function init() {
-  // your code here
+  index = 0
+  var body = document.getElementsByTagName("body")[0]
+  for (let i = 0; i < codes.length; i++){
+    //addListener(codes[i], body)
+  }
+}
+
+function addListener(eventType, node){
+  console.log(eventType)
+  node.addEventListener(eventType, function(event) {
+    console.log(eventType)
+    checkIfEventIsCorrect(eventType)
+})
+}
+
+function checkIfEventIsCorrect(event){
+  console.log(event)
 }
 ```
 
