@@ -23,7 +23,6 @@ function init() {
     const key = event.key;
     console.log(key);
     
-    
     if (key === codes[index]) {
       index++;
   
