@@ -11,22 +11,29 @@ const codes = [
   "a"
 ];
 
+let index = 0;
+
 function init() {
 //  document.body.addEventListener('keydown', handleKeydown)
     document.querySelector("body").addEventListener('keydown', handleKeydown)
 }
 
 function handleKeydown(e) {
-  let index = 0
   let key = e.key
+
+  // DELETE ME
+  //console.log(`index: ${index}; key: '${key}'`)
 
   if(key === codes[index]) {
     index++
-    //console.log(`Pressed key: '${key}'`)
 
     if(codes.length === index) { // we have full house ;-)
-        alert ("Congratulations! You Easter Egg is in the mail ...")
+        window.alert ("Congratulations! You Easter Egg is in the mail ...")
+
+        index = 0 //reset
     }
+  } else {
+    index = 0 //no luck; start over
   }
 }
 
