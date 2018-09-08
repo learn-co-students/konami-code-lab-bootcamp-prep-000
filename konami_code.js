@@ -12,5 +12,22 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  document.body.addEventListener('keydown', handleKeydown)
 }
+
+function handleKeydown(e) {
+  let index = 0
+  let key = e.key
+
+  if(key === codes[index]) {
+    index++
+    //console.log(`Pressed key: '${key}'`)
+
+    if(codes.length === index) { // we have full house ;-)
+        alert ("Congratulations! You Easter Egg is in the mail ...")
+    }
+  }
+}
+
+// initialise listener
+init()
