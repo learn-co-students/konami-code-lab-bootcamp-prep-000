@@ -12,7 +12,8 @@ const codes = [
 ];
 
 function init() {
-  document.body.addEventListener('keydown', handleKeydown)
+//  document.body.addEventListener('keydown', handleKeydown)
+    document.querySelector("body").addEventListener('keydown', handleKeydown)
 }
 
 function handleKeydown(e) {
