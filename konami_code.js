@@ -36,6 +36,3 @@ function handleKeydown(e) {
     index = 0 //no luck; start over
   }
 }
-
-// initialise listener
-init()
