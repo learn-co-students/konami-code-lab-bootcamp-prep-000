@@ -13,7 +13,8 @@ const codes = [
 
 function init() {
   let index = 0;
-  function onKeyDownHandler(e) {
+  document.addEventListener('keydown',  function(e) {
+  
     const key = e.key;
     
     if (key === codes[index]) {
@@ -21,12 +22,13 @@ function init() {
       if (index === codes.length) {
         alert("Hurray!");
         
-        index = 0 }
-    } else {
-      index = 0;
-    }
-  }
+        index = 0 }}
+    else {
+      index = 0; }
+    
+})
 }
+
       
     
 
