@@ -71,7 +71,7 @@ function init() {
     }
 
     if (index === codes.length) {
-      window.alert("Hurray!");
+      window.alert("Conrats! You found the Secret Code.");
       index = 0
     }
 
