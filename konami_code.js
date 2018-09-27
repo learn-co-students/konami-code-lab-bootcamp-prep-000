@@ -10,7 +10,11 @@ const codes = [
   "b",
   "a"
 ];
-
+var pressed=[];
+function checkCode(e){pressed.push(e.key);var temp=pressed.slice(-10); console.log(temp);for(var i=0;i<10;i++)
+{if (temp[i]!==codes[i]){return}}
+alert('Congrats!');}
 function init() {
-  // your code here
+ document.addEventListener('keydown',checkCode);
 }
+init();
