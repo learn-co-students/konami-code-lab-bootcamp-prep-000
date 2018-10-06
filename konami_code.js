@@ -1,20 +1,21 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 	
 
-   var i = 0;
-  function keyDownHandler(e) {
-    const key = parseInt(e.detail || e.which);
-  if (key === code[i]) {
-    i++;
-    if (i === code.length) {
-        alert("Congratulatory Message");
-        i = 0;
+let index = 0;
+  function init() {
+  
+  input.addEventListener('keydown', onKeyDownHandler);
+   function onKeyDownHandler(e) {
+    const pressedKey = parseInt(e.detail || e.which);
+    console.log(e.which);
+     if (pressedKey === code[index]) {
+      index++;
+       if (index === code.length) {
+        alert(`Congrats, you unlocked the Konami code!`);
+        index = 0;
+      }
+    } else {
+      index = 0;
     }
   }
-  else {
-    i = 0;
-  }
-}
-function init() {
-  document.body.addEventListener('keydown',onKeyDownHandler);
-}
+ }
