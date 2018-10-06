@@ -1,26 +1,20 @@
-const alphabet = ['a', 'b', 'c'];
+const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
+	
 
-let index = 0;
-function init() {
-  // your code here
-
-
-  function onKeyDownHandler(e) {
-  const key = e.key;
- 
-  if (key === alphabet[index]) {
-    index++;
- 
-    if (index === alphabet.length) {
-      alert("Hurray!");
- 
-      index = 0;
+   var i = 0;
+  function keyDownHandler(e) {
+    const key = parseInt(e.detail || e.which);
+  if (key === code[i]) {
+    i++;
+    if (i === code.length) {
+        alert("Congratulatory Message");
+        i = 0;
     }
-  } else {
-    index = 0;
+  }
+  else {
+    i = 0;
   }
 }
-
-
-
+function init() {
+  document.body.addEventListener('keydown',onKeyDownHandler);
 }
