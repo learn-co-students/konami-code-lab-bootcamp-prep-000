@@ -38,7 +38,7 @@ describe("index.js", () => {
     it("does not trigger an alert if the wrong code is entered", () => {
       spy.reset()
 
-      for (let i = 0; i < codes.length - 1; i++) {
+      for (let i = 0; i < codes.length; i++) {
         triggerKeyDown(codes[i])
       }
       triggerKeyDown("ArrowUp")
