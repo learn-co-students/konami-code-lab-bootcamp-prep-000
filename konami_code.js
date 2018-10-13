@@ -22,15 +22,17 @@ function init() {
     
     const key = event.key;
     if (key === codes[index]) {
+      console.log(key);
+      
       index++;
       if (index === codes.length) {
         alert("Hurray!");
+        console.log("yay");
         index = 0
       }
     } else {
       index = 0
     }
-    console.log(`${key}`);
       
   
     // Cancel the default action to avoid it being handled twice
