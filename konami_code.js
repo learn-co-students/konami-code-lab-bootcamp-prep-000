@@ -11,6 +11,17 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
-}
+let index = 0
+  // your code here	
+document.addEventListener('keydown', (e)=>{init(e.key)}, true)
+ function init(e) {
+ if(e === codes[index].toString()) {
+   index++
+   if(index === codes.length) {
+     alert("You win")
+     index = 0
+ }
+ } else {
+   index = 0
+ }
+}	
