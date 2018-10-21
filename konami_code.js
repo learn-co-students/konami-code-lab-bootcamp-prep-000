@@ -29,6 +29,7 @@ function init() {
        
        if(e.key === codes[last]) {
          alert("Yeah Du geile Sau");
+         i = 0;
        }
      
      } else {
