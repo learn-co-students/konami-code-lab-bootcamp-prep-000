@@ -10,7 +10,20 @@ const codes = [
   "b",
   "a"
 ];
+document.body.addEventListener('keydown', init);
+  let index = 0;
 
-function init() {
-  // your code here
+  function init(e) {
+  const keypress = e.key;
+  if (keypress === codes[index]) {
+    index++;
+  
+    if (index === codes.length) {
+      alert("Hurray!");
+      
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
 }
