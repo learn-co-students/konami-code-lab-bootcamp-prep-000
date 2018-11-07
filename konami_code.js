@@ -17,10 +17,10 @@ function init() {
   
   let counter = 0
 
-  body.addEventListener('keydown', function(e){
+  function onKeyDownHandler(e){
     console.log(e.key)
 
-      const key = e.key;
+    const key = e.key;
 
       if(key === codes[counter]){
         counter += 1
@@ -30,13 +30,15 @@ function init() {
         counter = 0
         console.log('back to 0')
       }
-
+      
       if(counter === codes.length){
         counter = 0
-        alert("Hurray!")
+        window.alert("Hurray!")
         console.log("Hurray!")
       }
-    
-  });
+  }
+
+  body.addEventListener('keydown', onKeyDownHandler);
+
   
 }
