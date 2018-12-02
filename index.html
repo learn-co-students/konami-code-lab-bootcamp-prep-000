@@ -15,6 +15,19 @@
     <!-- <div> for Mocha to display test results. -->
     <div id="mocha"></div>
 
+    <!-- <div> to show user keyboard inputs -->
+    <div id="output-pane"
+      style="
+        height: 30px;
+        width: 50%;
+        color:white;
+        background-color:black;
+        text-align:center;
+        font-size:24px;
+        border-style:solid;
+        ">
+        No Input</div>
+
     <!-- Include Mocha and set it up for BDD-style testing. -->
     <script src="node_modules/mocha/mocha.js"></script>
     <script>mocha.setup('bdd');</script>
