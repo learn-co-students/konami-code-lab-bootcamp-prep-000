@@ -1,3 +1,5 @@
+// Random comment
+
 const codes = [
   "ArrowUp", // 0
   "ArrowUp", // 1
@@ -17,7 +19,6 @@ function init() {
 
 var index = 0
 let correctKey = false
-
 const main = document.querySelector('body')
 
 main.addEventListener("keydown", (e) => {
