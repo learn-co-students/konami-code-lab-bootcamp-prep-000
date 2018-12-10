@@ -21,6 +21,9 @@ const codes = [
   "a"
 ];
 
+let index = 0
+let rightKey = false
+
 function init() {
   // your code here
 }
