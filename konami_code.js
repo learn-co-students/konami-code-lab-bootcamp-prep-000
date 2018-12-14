@@ -21,13 +21,16 @@ function init() {
   
   
     var inputKey = e.key;
+    
   console.log(inputKey);
+  
     var requiredkey = codes[index];
    
    
     if (inputKey === requiredkey) { 
       
        ++index;
+       
        console.log(index);
        
     console.log(codes.length);
@@ -40,9 +43,9 @@ function init() {
      
       index = 0;
     
-      }  
-     }else { 
+        }  
+      } else { 
       index = 0;
-  }
-})
+    }
+  })
 }
