@@ -19,10 +19,11 @@ function init() {
     if (key === codes[index]){
       index++; 
       if (index === codes.length){
-        alert("Way to go!")}
-        else {index = 0}
+        alert("Way to go!")
+        index = 0;
       }
-  }
-)
+       } else {index = 0}
+      }
+  )
 }
 
