@@ -11,15 +11,19 @@ const codes = [
   "a"
 ];
 
+var count = document.createElement('div');
+count.innerHTML = 'Hello, DOM!';
+count.style.backgroundColor = '#ffffff';
+document.body.appendChild(count)
 
 function init() {
+  
+  let body = document.querySelector('body')
   let counter = 0
-  let count = document.createElement("div")
-  count.innerHTML = toString(0)
-  document.querySelector('body').appendChild(count);
-  document.querySelector('body').addEventListener('keydown', function(e){
+
+  body.addEventListener('keydown', function(e){
     if (e.key === codes[counter]){
-      counter ++
+      counter++
     }else{
       counter = 0
     }
@@ -27,5 +31,5 @@ function init() {
       alert("acheivement unlocked")
     }
     count.innerHTML = toString(counter)
-  })
+  });
 }
