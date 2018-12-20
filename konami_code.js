@@ -25,7 +25,7 @@ function init() {
       }
     }
     while (i<codes.length);
-    alert('HI 20000');
+    alert("Code successfuly entered.");
     return i=0
   })
 }
