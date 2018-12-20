@@ -13,10 +13,11 @@ const codes = [
 
 function init() {
   let i=0;
-  document.body.addEventListener('keydown', function (keyStroke) {
+  document.body.addEventListener('keydown', function (event) {
     var correctInput=codes[i];
+    console.log("This is the event.key", event.key)
     do {
-      if (keyStroke===correctInput) {
+      if (event.key===correctInput) {
         i++
       }
       else {
