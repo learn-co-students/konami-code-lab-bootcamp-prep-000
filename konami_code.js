@@ -12,21 +12,20 @@ const codes = [
 ];
 
 function init() {
-  let i=0;
-  document.body.addEventListener('keydown', function (event) {
-    var correctInput=codes[i];
-    console.log("This is the event.key", event.key)
-    do {
-      if (event.key===correctInput) {
-        i++
-      }
-      else {
-        i=0
-      }
+  var index=0;
+  document.body.addEventListener('keydown', event => {
+    const correctInput=codes[index];
+    const input=event.key;
+    if (index===codes.length) {
+      alert("Code Successfully Entered");
+      return index=0
     }
-    while (i<codes.length);
-    alert("Code successfuly entered.");
-    return i=0
+    else if (input===correctInput) {
+      index++;
+    }
+    else {
+      index=0;
+    }
   })
 }
 
