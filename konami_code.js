@@ -16,17 +16,15 @@ function init() {
   document.body.addEventListener('keydown', event => {
     const correctInput=codes[index];
     const input=event.key;
-    if (index===codes.length) {
-      alert("Code Successfully Entered");
-      return index=0
-    }
-    else if (input===correctInput) {
+    if (input===correctInput) {
       index++;
+      if (index===codes.length){
+        alert("Code Successfully Entered");
+        return index=0;
+      }
     }
     else {
       index=0;
     }
   })
 }
-
-init()
