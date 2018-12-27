@@ -5,17 +5,15 @@ function init(){
   nd.addEventListener('keydown',function(e){ 
     
     let k=e.which;
-    console.log(k);
+    //console.log(k);
     if(k===codes[done]){
-      
-      done++;
-      console.log(done);
+        done++;
+      //console.log(done);
     
-    if(done===codes.length){
+      if(done===codes.length){
       alert('Congrats!');
       done=0;
-    } 
-      
+      }      
     }
     else {
       done=0;
