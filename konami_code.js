@@ -12,5 +12,13 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  let keys = []
+  document.body.addEventListener('keydown', (e) => {
+    console.log(keys)
+    keys.splice(-codes.length -1, keys.length - codes.length)
+    keys.push(e.key);
+    if (keys.join('') === codes.join('')) {
+      alert('ahhh')
+    }
+  })
 }
