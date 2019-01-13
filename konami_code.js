@@ -1,5 +1,4 @@
-const codes = [
-  "ArrowUp",
+const codes = [ "ArrowUp",
   "ArrowUp",
   "ArrowDown",
   "ArrowDown",
@@ -8,27 +7,26 @@ const codes = [
   "ArrowLeft",
   "ArrowRight",
   "b",
-  "a"
-];
+  "a"];
 
-index = 0;
 
 function init() {
-  function onKeyDownHandler(e) {
-    const key = e.key || e.codes
+  let index = 0;
+  document.body.addEventListener('keydown', function(e) {
+    const key = e.key
+ 
     
     if (key === codes[index]) {
-      i++
+      index++
       
-      if (key === codes.length) {
-        alert("KONAMI CODE")
+      if (index === codes.length) {
+        alert("YAY!");
+        
         index = 0
       }
-      else {
+     } else {
         index = 0
       }
-      
-    }
-  }
-  document.body.addEventListener('keydown', onKeyDownHandler);
+  })
 }
+
