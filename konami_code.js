@@ -21,7 +21,6 @@ function init() {
 
     index = (codes[index] === key) ? ++index : 0
 
-
      if (index === codes.length) {
        window.alert("Hurray!");
        index = 0
