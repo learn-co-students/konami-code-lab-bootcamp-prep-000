@@ -15,13 +15,17 @@ const codes = [
 
 function init() {
   let index = 0
-  document.body.addEventListener('keydown', function(e) {
+
+  document.body.addEventListener('keydown', (e) => {
     const key = e.key;
-    if (key === codes[index]) {
+    if (codes[index] === key) {
      index++
+     index = 0;
      if (index === codes.length) {
-       alert("Hurray!");
+       window.alert("Hurray!");
        index = 0
      }
+
    }
+ });
  }
