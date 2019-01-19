@@ -12,5 +12,11 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+
+let index = 0;
+codes.addEventListener('keydown', function(e) {
+  alert("Hurray!");
+});
+
+
 }
