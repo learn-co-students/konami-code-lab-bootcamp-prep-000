@@ -12,11 +12,31 @@ const codes = [
 ];
 
 function init() {
-
 let index = 0;
-codes.addEventListener('keydown', function(e) {
-  alert("Hurray!");
-});
 
-
+document.body.addEventListener('keydown', function(e){
+  const key = e.key;
+  
+  if (key === codes[index]) {
+    index++;
+ 
+    if (index === codes.length) {
+      alert("Hurray!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
 }
+);
+}
+
+
+// Attach and event listener to document.body and check for 'keydown' events. 
+
+/*
+What does this mean?
+
+"When you're testing the code out in the browser, be sure to call init() to attach the event listener and set everything up!"
+*/
