@@ -24,5 +24,6 @@
   "homepage": "https://github.com/learn-co-curriculum/konami-code-lab#readme",
   "devDependencies": {
     "learn-browser": "^0.1.17"
-  }
+  },
+  "dependencies": {}
 }
