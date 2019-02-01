@@ -32,6 +32,8 @@ function init() {
      }
      
    }
+   
+   //Reset index to continue listening for correct code
    else {
      ndx = 0;
    }
