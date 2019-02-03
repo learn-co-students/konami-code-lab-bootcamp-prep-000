@@ -17,7 +17,6 @@ function init() {
   var index = 0
   body.addEventListener('keydown', function(e) {
     if(e.key === codes[index]){
-      window.alert("Hurray!");
       index++
       console.log(index)
       console.log(e.key)
@@ -31,3 +30,17 @@ function init() {
     }
   });
 }
+
+// function init() {
+//   let idx = 0
+
+//   document.body.addEventListener("keydown", (e) => {
+//     const key = e.key
+    
+//     idx = (codes[idx] === key) ? ++idx : 0
+    
+//     if (idx === codes.length) {
+//       window.alert("Hurray!");
+//     }
+//   })
+// }
