@@ -12,6 +12,7 @@ const codes = [
 ];
 
 function init() {
+alert('Testing');
 let index = 0;
 
 document.body.addEventListener('keydown', function(k){
@@ -22,7 +23,7 @@ document.body.addEventListener('keydown', function(k){
         index++;
  
       if (index === codes.length) {
-        alert("Hurray!");
+        window.alert("Hurray!");
  
         index = 0;
         }
@@ -31,5 +32,3 @@ document.body.addEventListener('keydown', function(k){
       }
     });
 }
-
-init();
