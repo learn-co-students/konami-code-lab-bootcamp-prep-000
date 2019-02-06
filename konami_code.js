@@ -11,6 +11,15 @@ const codes = [
   "a"
 ];
 
+let index = 0;
 function init() {
-  // your code here
+  if keydown in correct order {
+    alert a congrats message
+  }
+  
+  else {
+    keep listening for keydown in correct order
+  }
+    
+  }
 }
