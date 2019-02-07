@@ -13,13 +13,19 @@ const codes = [
 
 let index = 0;
 function init() {
-  if keydown in correct order {
-    alert a congrats message
-  }
-  
-  else {
-    keep listening for keydown in correct order
-  }
+  document.body.addEventListener('keydown', function(event){
+    const keyPress = event.key;
+    if (keyPress === codes[index]) {
+      index++; 
     
-  }
+      if (index === codes.length) {
+        alert("congrats!");
+        }
+    
+      } else {
+        index = 0
+      }
+}, false);  
+  
+
 }
