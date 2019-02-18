@@ -10,11 +10,9 @@ const codes = [
   "b",
   "a"
 ];
-
+function init() {
   let index = 0;
-  document.body.addEventListener("keydown", checkKey);
-  
-  function checkKey(e) {
+  document.body.addEventListener("keydown", function checkKey(e){
     const key = e.key;
     
     if (key === codes[index]) {
@@ -28,5 +26,6 @@ const codes = [
         index = 0;
       }
     }
-  }
+  })
 }
+
