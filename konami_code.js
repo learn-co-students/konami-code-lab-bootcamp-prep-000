@@ -16,16 +16,17 @@ function init() {
     const key = e.key;
     
     if (key === codes[index]) {
-      index++;
+      ++index;
       
       if (index === codes.length) {
+       
         window.alert("Congrats!");
-        
-      }
-      else {
         index = 0;
       }
-    }
+      
+      }else {
+        index = 0;
+      }
+    
   })
 }
-
