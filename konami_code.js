@@ -12,6 +12,7 @@ const codes = [
 ];
 
 //already did it
+//again learn isn't working
 
 function init() {
   let index = 0
