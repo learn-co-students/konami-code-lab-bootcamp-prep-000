@@ -15,11 +15,13 @@ function init() {
 let index = 0;
 
 document.body.addEventListener('keydown', function(e) {
-  if(e.key === codes[index]) {
+  let key = e.key;
+ 
+  if(key === codes[index]) {
     index++;
   }
   if(index === codes.length) {
-    alert('Hurray');
+    alert('Hurray!');
     index = 0;
   }
 });
