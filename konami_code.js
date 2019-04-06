@@ -11,29 +11,21 @@ const codes = [
   "a"
 ];
 
-function init(e) {
+function init()
+{
   // your code here
   
-  // console.log(`e = ${e.key} --- ${index} --- ${codes[index]}`);
-  
-  if (e.key === codes[index])
+  var x = 0;
+  document.body.addEventListener('keydown', function(e)
   {
-    if (index < 9)
+    //console.log(e.key);
+    
+    if(e.key === codes[x])
     {
-      index ++;
+      if (x == 9) { alert('HADOUKEN')}
+      x++;
     }
-    else if (index == 9)
-    {
-      alert("HADOUKEN!!!");
-      index = 0;
-    }
-  }
-  else
-  {
-    index = 0;
-  }
+    else {x = 0}
+    
+  });
 }
-
-var index = 0;
-
-document.body.addEventListener('keydown', init); 
