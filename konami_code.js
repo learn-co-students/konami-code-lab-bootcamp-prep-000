@@ -22,6 +22,7 @@ function init() {
       index++
       
       if (index === codes.length) {
+       console.log("Konami code woooooooo!")
        alert("Konami code woooooooo!");
        index = 0;
       }
