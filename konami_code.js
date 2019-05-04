@@ -12,21 +12,24 @@ const codes = [
 ];
 
 
-function init(e) {
+function init() {
   let index = 0;
-  const key = e.key;
   
-  if (key === codes[index]){
-    index++;
-    if (index === codes.length){
-      alert('Congratulation!')
-      index = 0;
+  const input = document.body;
+  input.addEventListener('keydown', (e) => { 
+    const key = e.key;
+    if (key === codes[index]){
+      index++;
+      if (index === codes.length){
+        alert('Hurray!')
+        index = 0;
+      } 
+    } else {
+       index = 0;
     }
-  } else {
-    index = 0;
-  }
+  }); 
 }
 
-const input = document.body;
-input.addEventListener('keydown', init); 
+
+
  
