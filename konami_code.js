@@ -11,8 +11,9 @@ const codes = [
   "a"
 ];
 
-let index = 0;
+
 function init(e) {
+  let index = 0;
   const key = e.key;
   
   if (key === codes[index]){
@@ -26,6 +27,6 @@ function init(e) {
   }
 }
 
-const input = document.querySelector('mocha');
+const input = document.body;
 input.addEventListener('keydown', init); 
  
