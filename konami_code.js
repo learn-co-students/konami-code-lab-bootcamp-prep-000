@@ -11,6 +11,18 @@ const codes = [
   "a"
 ];
 
+var i = 0
+
 function init() {
-  // your code here
+  var body = document.body
+
+  body.addEventListener('keydown', function(e){
+    for(let i = 0; i < code.length; i++){
+      if(parseInt(e.detail || e.which) === code[i]) {
+        alert("YOU DID IT!")
+      }
+    }
+  })
 }
+
+init()
