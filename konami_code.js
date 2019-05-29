@@ -12,13 +12,13 @@ const codes = [
 ];
 
 function init() {
-  document.addEventListener('keydown',function(e) {
+  let i=0
+  document.body.addEventListener('keydown',function(e) {
     console.log(e.key)
-    let i = 0
     if (e.key === codes[i]) {
       i++
       if (i === codes.length) {
-        alert("Congratulations")
+        window.alert("Congratulations")
         i = 0
         }
     } else {
