@@ -10,20 +10,21 @@ const codes = [
   "b",
   "a"
 ];
-init();
-let index = 0;
-  document.body.addEventListener('keydown', onKeyDownHandler)
 
-function onKeyDownHandler(e){
-  const key = e.key;
-  if (key === codes[index]){
+function init() {
+let index = 0;
+const input = document.body;
+
+input.addEventListener(`keydown`, function(e) {
+  if (e.key === codes[index]){
     index++;
 
     if (index === codes.length){
-      alert("Hurray!");
+      alert("Congratulations!");
       index = 0;
     }
   } else {
     index = 0;
   }
-
+});
+}
