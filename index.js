@@ -11,25 +11,23 @@ const codes = [
   "a"
 ];
 
-const code = [38, 38, 40, 40, 37, 39, 37 ,39, 66, 65];
+let index = 0;
 
-function init() {
-  var index = 0;
-  document.body.addEventListener('keydown', onKeyDownHandler);
-
-   function onKeyDownHandler(e) {
-    const key = parseInt(e.detail || e.which);
-    // console.log('key', key)
-    if (key === code[index]) {
-      index++;
-      console.log(index);
-       if (index === code.length) {
-        alert("YOU DID IT!");
-        index = 0;
-      }
-    } else {
-      index = 0;
-    }
+document.body.addEventListener("keydown", (thingPressed) => {
+  const key = thingPressed.key 
+  console.log(key) 
+  
+  if (codes[index] == key) {
+    ++index 
+  } 
+  
+  else {
+    index = 0 
   }
-}
-init();
+  
+  console.log(index)
+  if (index == 10) {
+    alert("Hurray!");
+    index = 0 
+  }
+}); 
