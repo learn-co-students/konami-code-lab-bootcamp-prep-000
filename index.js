@@ -13,6 +13,7 @@ const codes = [
 
 let index = 0;
 
+function init() {
 document.body.addEventListener("keydown", (thingPressed) => {
   const key = thingPressed.key 
   console.log(key) 
@@ -27,7 +28,8 @@ document.body.addEventListener("keydown", (thingPressed) => {
   
   console.log(index)
   if (index == 10) {
-    alert("Hurray!");
+    window.alert("Hurray!");
     index = 0 
   }
 }); 
+}
