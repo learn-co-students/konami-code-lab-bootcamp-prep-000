@@ -13,9 +13,10 @@ const codes = [
 
 let index = 0;
 
+
 function init() {
-document.body.addEventListener("keydown", (thingPressed) => {
-  const key = thingPressed.key 
+document.body.addEventListener("keydown", (keyPressed) => {
+  const key = keyPressed.key 
   console.log(key) 
   
   if (codes[index] == key) {
@@ -33,3 +34,4 @@ document.body.addEventListener("keydown", (thingPressed) => {
   }
 }); 
 }
+

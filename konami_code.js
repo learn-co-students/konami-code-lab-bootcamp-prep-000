@@ -34,28 +34,3 @@
 // }
 
 
-
-// // document.body.addEventListener("keydown", (keypress) => {
-// //   const key = thingPressed.key 
-// //   console.log(key) 
-  
-// //   if (codes[index] == key) {
-// //     ++index 
-// //   } 
-  
-// //   else {
-// //     idx = 0 
-// //   }
-  
-// //   console.log(index)
-// //   if (index == 10) {
-// //     alert("Hurray!");
-// //     index = 0 
-// //   }
-// // }); 
-
-
-  
-
-// // const index = [0]
- 
