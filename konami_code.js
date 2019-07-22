@@ -11,28 +11,25 @@ const codes = [
   "a"
 ];
 
-document.body.addEventListener('ArronDown', function(event) {
-  alert('I was clicked!');
-});
 
-
+function init() {
+  document.body.addEventListener("keydown", onKeyDownHandler);
+  
 let index = 0;
 
 function onKeyDownHandler(e) {
-  const key = e.key;
+   const key = e.key;
  
-  if (key === alphabet[index]) {
-    index++;
+   if (key === codes[index]) {
+     index++;
  
-    if (index === alphabet.length) {
-      alert("Hurray!");
+     if (index === codes.length) {
+       alert("Hurray!");
  
-      index = 0;
-    }
-  } else {
-    index = 0;
-  }
-}
-function init() {
-  // your code here
+       index = 0;
+     }
+   } else {
+     index = 0;
+   }
+ }
 }
