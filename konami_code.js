@@ -11,7 +11,7 @@ const codes = [
   "a"
 ];
 
-document.body.addEventListener('ArrowUp', function(event) {
+document.body.addEventListener('ArronDown', function(event) {
   alert('I was clicked!');
 });
 
