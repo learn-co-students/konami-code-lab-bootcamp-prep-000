@@ -11,9 +11,7 @@ const codes = [
   "a"
 ];
 
-document.body.addEventListener(thingyouwanttoadd)
-
-main.addEventListener('click', function(event) {
+document.body.addEventListener('ArrowUp', function(event) {
   alert('I was clicked!');
 });
 
