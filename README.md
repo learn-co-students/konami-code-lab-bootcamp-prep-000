@@ -67,6 +67,8 @@ function onKeyDownHandler(e) {
 
 Have fun!
 
+**Note:** Once you have the tests passing you still may not see the alert pop up if you try to test your code in the browser. This is because the test 'intercepts' the alert. To see it work in the browser, temporarily comment out all the code in the `indexTest.js` file *except* the line where `init()` is called.
+
 ## Hints
 `KeyboardEvent` has gotten lots of recent updates. The `key` and `code` properties recently replaced `which`, `keyCode`, and `charCode` properties, which were often implemented slightly differently between different browsers and would report different values across different operating systems. Some environments (node in particular) don't know about `KeyboardEvent`
 
