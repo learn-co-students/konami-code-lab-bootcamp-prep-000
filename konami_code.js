@@ -11,6 +11,23 @@ const codes = [
   "a"
 ];
 
+let currentKeyCount = 0
+
 function init() {
-  // your code here
+  
+  document.body.addEventListener("keydown", function(pressed){
+    
+    if(pressed.key === codes[currentKeyCount]) {
+      
+        currentKeyCount++
+        
+      if(currentKeyCount === codes.length) {
+        
+        alert("OMGAWD YOU PRESSED SOME BUTTONS");
+        currentKeyCount = 0
+      }
+    }
+  })
 }
+
+init()
