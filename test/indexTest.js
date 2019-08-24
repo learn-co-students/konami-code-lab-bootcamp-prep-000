@@ -19,16 +19,17 @@ describe("index.js", () => {
     const keyboardEvent = new KeyboardEvent("keydown", { key });
     document.body.dispatchEvent(keyboardEvent);
   }
-  
+
   init()
 
   describe("Konami code", () => {
-    
+
     const spy = sinon.stub(window, "alert");
-    
+
     it("triggers an alert if the right code is entered", () => {
-      
-      for (let i = 0, l = codes.length; i < l; i++) {
+
+      for (let i = 0, l = codes.length+1; i < l; i++) {
+        console.log(codes.length);
         triggerKeyDown(codes[i]);
       }
       expect(spy.called).to.equal(true)
@@ -42,7 +43,7 @@ describe("index.js", () => {
         triggerKeyDown(codes[i])
       }
       triggerKeyDown("ArrowUp")
-      
+
       expect(spy.notCalled).to.equal(true);
     });
   });
