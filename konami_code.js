@@ -7,17 +7,17 @@ const codes = [
   "ArrowRight",
   "ArrowLeft",
   "ArrowRight",
-  "KeyB",
-  "KeyA"
+  "b",
+  "a"
 ];
 
 let index = 0;
 
 function init() {
   const body = document.querySelector("body")
-  body.onkeydown = logKey;
+  document.body.addEventListener("keydown", logKey);
   function logKey(e){
-    if(e.code === codes[index]){
+    if(e.key === codes[index]){
       index++
     }
     else{
@@ -26,7 +26,7 @@ function init() {
     if(index === codes.length)
     {
       index = 0
-      alert ("Way to go!")
+      alert("Hurray!");
     }
   }
 }
