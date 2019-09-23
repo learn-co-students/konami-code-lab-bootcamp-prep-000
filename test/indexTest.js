@@ -1,49 +1,47 @@
-const expect = chai.expect;
+describe('index', () => {
+  const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
 
-describe("index.js", () => {
+  function triggerKeyDown(which) {
+    const keyboardEvent = document.createEvent("KeyboardEvent")
 
-  const codes = [
-    "ArrowUp",
-    "ArrowUp",
-    "ArrowDown",
-    "ArrowDown",
-    "ArrowLeft",
-    "ArrowRight",
-    "ArrowLeft",
-    "ArrowRight",
-    "b",
-    "a"
-  ];
+    keyboardEvent.initKeyboardEvent(
+      'keydown',
+      true,
+      true,
+      window,
+      which,
+      which,
+      0,
+      null,
+      null
+    )
 
-  function triggerKeyDown(key) {
-    const keyboardEvent = new KeyboardEvent("keydown", { key });
-    document.body.dispatchEvent(keyboardEvent);
+    document.body.dispatchEvent(keyboardEvent)
   }
-  
-  init()
 
-  describe("Konami code", () => {
-    
-    const spy = sinon.stub(window, "alert");
-    
-    it("triggers an alert if the right code is entered", () => {
-      
-      for (let i = 0, l = codes.length; i < l; i++) {
-        triggerKeyDown(codes[i]);
+  describe('Konami code', () => {
+    it('triggers an alert if the right code is entered', () => {
+      init()
+
+      window.alert = expect.createSpy()
+
+      for (let i = 0, l = code.length; i < l; i++) {
+        triggerKeyDown(code[i])
       }
-      expect(spy.called).to.equal(true)
-      expect(spy.callCount).to.equal(1)
-    });
 
-    it("does not trigger an alert if the wrong code is entered", () => {
-      spy.reset()
+      expect(window.alert).toHaveBeenCalled()
+    })
 
-      for (let i = 0; i < codes.length - 1; i++) {
-        triggerKeyDown(codes[i])
+    it('does not trigger an alert if the wrong code is entered', () => {
+      init()
+
+      window.alert = expect.createSpy()
+
+      for (let i = 0, l = code.length; i < l; i++) {
+        triggerKeyDown(i)
       }
-      triggerKeyDown("ArrowUp")
-      
-      expect(spy.notCalled).to.equal(true);
-    });
-  });
-});
+
+      expect(window.alert).toNotHaveBeenCalled()
+    })
+  })
+})
