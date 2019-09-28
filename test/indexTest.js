@@ -20,7 +20,7 @@ describe("index.js", () => {
     document.body.dispatchEvent(keyboardEvent);
   }
   
-  init();
+ init();
 
   describe("Konami code", () => {
     

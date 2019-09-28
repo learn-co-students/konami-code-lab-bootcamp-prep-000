@@ -11,7 +11,6 @@ const codes = [
   "a"
 ];
 
-
 function init() {
  // your code here 
 
@@ -26,12 +25,11 @@ document.addEventListener('keydown',
     // compare the key with the required key
     if (key === codes[index]) {
     console.log('key: '+ key + ' V: ' + codes[index] + 'Index: ' + index);
-    window.alert("Got one!");
     index++;
-
+  window.alert("DID THE CODE!");
     // if the last key is reached, activate cheats
     if (index === codes.length) {
-      console.log('You Did the Code!!! ----------');
+      console.log('You Did the Code!!! ---------');
       window.alert("Hurray");
       index = 0;
     }
@@ -40,4 +38,7 @@ document.addEventListener('keydown',
   }
 });
 }
+
+
+
 
