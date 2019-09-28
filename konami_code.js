@@ -11,19 +11,31 @@ const codes = [
   "a"
 ];
 
-// Write JavaScript code inside init() function
+
 function init() {
-  
+ // your code here 
+
+let index = 0;
+/////////////////////////////
+document.addEventListener('keydown', 
+  function(e) {
+    // get the value of the key code from the key map
+    const key = e.key;
+    var requiredKey = codes[index];
+
+    // compare the key with the required key
+    if (key === codes[index]) {
+    console.log('key: '+ key + ' V: ' + codes[index] + 'Index: ' + index);
+    index++;
+
+    // if the last key is reached, activate cheats
+    if (index === codes.length) {
+      console.log('You Did the Code!!! ----------');
+      window.alert("Hurray");
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
+});
 }
-
-/*
-You'll want to attach an event listener to document.body and check for 'keydown' events. If the user enters this special code, pressing all ten of the keys in the correct order, alert() a congratulatory message.
-*/
-=======
-
-
-
-
-
-
->>>>>>> 1e15406a461a1622efce65f03b96c27706c28f87
