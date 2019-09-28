@@ -28,6 +28,7 @@ describe("index.js", () => {
     it("triggers an alert if the right code is entered", () => {
       
       for (let i = 0, l = codes.length; i < l; i++) {
+      // console.log(i + ' spy.called ' + spy.called +' spy.callCount ' + spy.callCount);
         (codes[i]);
       }
       
