@@ -19,18 +19,18 @@ function onKeyDownHandler(e) {
   const key = e.key;
   
   if (key === codes[index]) {
-    console.log(index)
+    console.log(index);
     index++;
     
     if (index === codes.length) {
       alert("Hurray!");
-          console.log('here you are')
+          console.log('here you are');
       index = 0;
     }
   } else {
     index = 0;
   }
 }
-document.addEventListener('keydown', onKeyDownHandler) 
+document.addEventListener('keydown', onKeyDownHandler); 
 }
 
