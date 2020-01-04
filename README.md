@@ -38,10 +38,9 @@ This is JavaScript's way of pulling in code from outside the page. Here, we've g
 ```js
 function init() {
 
-  // Attaching an keydown event listener to the document.body
+  // Attaching an keydown event listener to document.body
   document.body.addEventListener("keydown", (event) => {
-    // Your code here. (Hint: Now how can we check for which specific key was pressed?)
-
+    // Now, how can we check for which specific key was pressed?
   }
 }
 ```
