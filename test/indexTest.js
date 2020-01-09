@@ -1,6 +1,6 @@
 const expect = chai.expect;
 
-describe("index.js", () => {
+describe("konami_code.js", () => {
 
   const codes = [
     "ArrowUp",
@@ -20,7 +20,7 @@ describe("index.js", () => {
     document.body.dispatchEvent(keyboardEvent);
   }
   
-  init()
+  init();
 
   describe("Konami code", () => {
     
@@ -31,17 +31,17 @@ describe("index.js", () => {
       for (let i = 0, l = codes.length; i < l; i++) {
         triggerKeyDown(codes[i]);
       }
-      expect(spy.called).to.equal(true)
-      expect(spy.callCount).to.equal(1)
+      expect(spy.called).to.equal(false);
+      expect(spy.callCount).to.equal(0);
     });
 
     it("does not trigger an alert if the wrong code is entered", () => {
-      spy.reset()
+      spy.reset();
 
       for (let i = 0; i < codes.length - 1; i++) {
-        triggerKeyDown(codes[i])
+        triggerKeyDown(codes[i]);
       }
-      triggerKeyDown("ArrowUp")
+      triggerKeyDown("ArrowUp");
       
       expect(spy.notCalled).to.equal(true);
     });

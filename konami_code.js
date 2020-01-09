@@ -12,5 +12,15 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  let index = 0;
+  
+  document.body.addEventListener("Keydown", (e) => {
+    const key = e.key;
+    
+    index = (codes[index] === key) ? ++index : 0;
+    
+    if (index === codes.length) {
+      alert("You have cracked the code!");
+    }
+  });
 }
