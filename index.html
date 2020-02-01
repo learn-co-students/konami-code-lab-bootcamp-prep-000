@@ -1,37 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
+<html>
+<head>
+<script>
+'use strict';
 
-    <title>Konami Code Lab</title>
-    <meta name="description" content="Introduction to JavaScript numbers and arithmetic in the Learn.co curriculum">
-    <meta name="author" content="Flatiron School">
+document.addEventListener('keydown', (event) => {
+  const keyName = event.key;
 
-    <!-- Include Mocha's stylesheet to style test results -->
-    <link rel="stylesheet" href="node_modules/mocha/mocha.css">
-  </head>
+  if (keyName === 'Control') {
+    // do not alert when only Control key is pressed.
+    return;
+  }
 
-  <body>
-    <!-- <div> for Mocha to display test results. -->
-    <div id="mocha"></div>
+  if (event.ctrlKey) {
+    // Even though event.key is not 'Control' (e.g., 'a' is pressed),
+    // event.ctrlKey may be true if Ctrl key is pressed at the same time.
+    alert(`Combination of ctrlKey + ${keyName}`);
+  } else {
+    alert(`Key pressed ${keyName}`);
+  }
+}, false);
 
-    <!-- Include Mocha and set it up for BDD-style testing. -->
-    <script src="node_modules/mocha/mocha.js"></script>
-    <script>mocha.setup('bdd');</script>
+document.addEventListener('keyup', (event) => {
+  const keyName = event.key;
 
-    <!-- Include Chai as the matcher library. -->
-    <script src="node_modules/chai/chai.js"></script>
+  // As the user releases the Ctrl key, the key is no longer active,
+  // so event.ctrlKey is false.
+  if (keyName === 'Control') {
+    alert('Control key was released');
+  }
+}, false);
 
-    <!-- Include Sinon as the library for spies, stubs, and mocks. -->
-    <script src="node_modules/sinon/pkg/sinon.js"></script>
+</script>
+</head>
 
-    <!-- Include the student's JavaScript file. -->
-    <script src="konami_code.js"></script>
-
-    <!-- Include the JavaScript file containing the tests. -->
-    <script src="test/indexTest.js"></script>
-
-    <!-- Include Flatiron School's minified test runner to push results to Learn. -->
-    <script src="node_modules/learn-browser/learnBrowser.min.js"></script>
-  </body>
+<body>
+</body>
 </html>
