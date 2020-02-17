@@ -42,7 +42,6 @@ describe("index.js", () => {
         triggerKeyDown(codes[i])
       }
       triggerKeyDown("ArrowUp")
-      
       expect(spy.notCalled).to.equal(true);
     });
   });
