@@ -1,4 +1,4 @@
-# Konami Code Lab
+ok # Konami Code Lab
 
 ## Objectives
 1. Practice using event listeners.
