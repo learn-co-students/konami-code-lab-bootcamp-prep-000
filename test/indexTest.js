@@ -36,7 +36,7 @@ describe("index.js", () => {
         }
 
         expect(spy.called).to.equal(true);
-        expect(spy.callCount).to.equal(1);
+        expect(spy.firstCall.firstArg).to.include("Hurray");
        } 
     
       finally { window.alert = savedAlert; }
