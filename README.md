@@ -1,12 +1,17 @@
 # Konami Code Lab
 
 ## Objectives
+
 1. Practice using event listeners.
 2. Explain how event listeners are triggered.
 3. Capture user interactions to trigger events on a page.
 
 ## Instructions
-In `konami_code.js`, you'll notice that we've provided very little: well, nothing except -- what's that? If you open the file up in your text editor, you should see:
+
+In `konami_code.js`, you'll notice that we've provided very little: well,
+nothing except -- what's that? If you open the file up in your text editor, you
+should see:
+
 ```js
 const codes = [
   "ArrowUp",
@@ -26,16 +31,28 @@ function init() {
 }
 ```
 
-But what could those keycodes be? They're the famous [Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as JavaScript KeyboardEvent keys. It's become a common Easter egg for sites to have hidden features behind this code, and now it's your turn to implement it!
+But what could those keycodes be? They're the famous
+[Konami Code](https://en.wikipedia.org/wiki/Konami_Code), as JavaScript
+KeyboardEvent keys. It's become a common Easter egg for sites to have hidden
+features behind this code, and now it's your turn to implement it!
 
 In `index.html`, you'll see that we're loading the file in for you:
+
 ```html
 <script src="konami_code.js"></script>
 ```
 
-This is JavaScript's way of pulling in code from outside the page. Here, we've given the `<script>` tag a local source (the file that's right here in the directory), but we could also supply a URL to load an external resource (more on that in a bit).
+This is JavaScript's way of pulling in code from outside the page. Here, we've
+given the `<script>` tag a local source (the file that's right here in the
+directory), but we could also supply a URL to load an external resource (more on
+that in a bit).
 
-You'll want to attach an event listener to `document.body` and check for `'keydown'` events, as shown in the example above. If the user enters this special code, pressing all ten of the keys in the correct order, `alert()` a congratulatory message. However, if they press a key out of sequence or a key that isn't part of the Konami code, don't `alert()` anything and simply keep listening for all ten `keydown`s in the correct order.
+You'll want to attach an event listener to `document.body` and check for
+`'keydown'` events, as shown in the example above. If the user enters this
+special code, pressing all ten of the keys in the correct order, `alert()` a
+congratulatory message. However, if they press a key out of sequence or a key
+that isn't part of the Konami code, don't `alert()` anything and simply keep
+listening for all ten `keydown`s in the correct order.
 
 ```js
 function init() {
@@ -47,9 +64,11 @@ function init() {
 }
 ```
 
-When you're testing the code out in the browser, be sure to call `init()` to attach the event listener and set everything up!
+**When you're testing the code out in the browser, be sure to call `init()` to
+attach the event listener and set everything up!**
 
 Stuck on how to get started? Here's a contrived, short example:
+
 ```js
 // Keys for A, B, and C keys.
 const alphabet = ['a', 'b', 'c'];
@@ -77,13 +96,27 @@ function onKeyDownHandler(e) {
 
 Have fun!
 
-**Note:** Once you have the tests passing you still may not see the alert pop up if you try to test your code in the browser. This is because the test 'intercepts' the alert. To see it work in the browser, temporarily comment out all the code in the `indexTest.js` file *except* the line where `init()` is called.
+**Note:** Once you have the tests passing you still may not see the alert pop up
+if you try to test your code in the browser. This is because the test
+'intercepts' the alert. To see it work in the browser, temporarily comment out
+all the code in the `indexTest.js` file *except* the line where `init()` is
+called.
 
 ## Hints
-`KeyboardEvent` has gotten lots of recent updates. The `key` and `code` properties recently replaced `which`, `keyCode`, and `charCode` properties, which were often implemented slightly differently between different browsers and would report different values across different operating systems. Some environments (node in particular) don't know about `KeyboardEvent`
+
+`KeyboardEvent` has gotten lots of recent updates. The `key` and `code`
+properties recently replaced `which`, `keyCode`, and `charCode` properties,
+which were often implemented slightly differently between different browsers and
+would report different values across different operating systems. Some
+environments (node in particular) don't know about `KeyboardEvent`
+
+If you are working on this lab using the in-browser IDE, you can see your
+progress in browser by using `httpserver` and navigating to the provided IP. You
+will need to close out of `httpserver` and run `learn` to test your solution.
 
 
 ## Resources
+
 - [Konami Code](https://en.wikipedia.org/wiki/Konami_Code)
 - [MDN - KeyboardEvent][KeyboardEvent]
 - [MDN — keydown][keydown]
