@@ -37,7 +37,7 @@ describe("index.js", () => {
 
         expect(spy.called).to.equal(true);
         expect(spy.firstCall.firstArg).to.include("Hurray");
-       } 
+      } 
     
       finally { window.alert = savedAlert; }
     });
@@ -55,7 +55,7 @@ describe("index.js", () => {
         triggerKeyDown("ArrowUp")
 
         expect(spy.notCalled).to.equal(true);
-       } 
+      } 
        
       
       finally { window.alert = savedAlert; }
