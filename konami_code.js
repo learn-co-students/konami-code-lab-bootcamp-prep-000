@@ -15,12 +15,13 @@ let index = 0
 
 function init(){
 document.body.addEventListener("keydown", (e) => {
-const key = e.key
+const key = e.key;
 if(key === codes[index]){
   index++; 
-if(index === codes.length){
-  alert("Hurray!");
-index = 0;
-  
-else {index = 0;}
-
+  if(index === codes.length){
+    window.alert("Hurray!");
+    index = 0;
+  }
+} else { index = 0;}
+})
+}
