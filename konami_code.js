@@ -11,6 +11,14 @@ const codes = [
   "a"
 ];
 
+var index = 0
+
 function init() {
-  // your code here
+  document.body.addEventListener('keydown', function (event) {
+    const key = parseInt(event.detail || e.which)
+    if (key === code[index]) {
+      alert('Hello')
+    }
+  })
 }
+init()
