@@ -11,6 +11,23 @@ const codes = [
   "a"
 ];
 
+let index = 0; 
+
 function init() {
-  // your code here
+  document.body.addEventListener("keydown", function onKeyDownHandler(e){
+    const key = e.key
+    
+    if (key === codes[index]){
+      console.log(key)
+      index++;
+      
+      if (index === codes.length){
+        alert("Hurray, achievment unlocked!")
+        index = 0
+      }
+    } else {
+      e.preventDefault()
+      index = 0
+    }
+  })
 }
