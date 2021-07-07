@@ -12,5 +12,15 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  let index = 0;
+  document.body.addEventListener("keydown", e => {
+    if (e.key === codes[index]) {
+      index++;
+      if (index === codes.length) {
+        alert("Life counter set to 30.");
+      }
+    } else {
+      index = 0;
+    }
+  });
 }
