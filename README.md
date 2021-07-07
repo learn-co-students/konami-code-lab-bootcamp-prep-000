@@ -1,4 +1,4 @@
-# Konami Code Lab
+bit# Konami Code Lab
 
 ## Objectives
 
@@ -27,7 +27,7 @@ const codes = [
 ];
 
 function init() {
-  // your code here
+  
 }
 ```
 
