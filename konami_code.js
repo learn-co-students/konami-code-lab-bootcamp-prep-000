@@ -10,7 +10,18 @@ const codes = [
   "b",
   "a"
 ];
-
-function init() {
+let index=0;
+ 
+document.addEventListener('keydown', function(e){
   // your code here
-}
+  const key =e.key;
+  if(key===codes[index]){
+    index++;
+    if(index===codes.length){
+      alert("Hurray!");
+      index=0;
+    }
+  }else{
+    index=0;
+  }
+});
