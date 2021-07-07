@@ -1,3 +1,4 @@
+
 const codes = [
   "ArrowUp",
   "ArrowUp",
@@ -9,8 +10,29 @@ const codes = [
   "ArrowRight",
   "b",
   "a"
-];
+]
 
-function init() {
-  // your code here
+ 
+
+let index = 0;
+
+function onKeyDownHandle(e) {
+  const key = e.key;
+ 
+  if (key === codes[index]) {
+    index++;
+ 
+    if (index === codes.length) {
+      alert("Congratulations!");
+ 
+      index = 0;
+    }
+  } else {
+    index = 0;
+  }
+}
+
+function init(){
+  var x = document.querySelector("body")
+  x.addEventListener("keydown", onKeyDownHandle)
 }
