@@ -1,5 +1,4 @@
-const codes = [
-  "ArrowUp",
+const codes = [ "ArrowUp",
   "ArrowUp",
   "ArrowDown",
   "ArrowDown",
@@ -8,9 +7,26 @@ const codes = [
   "ArrowLeft",
   "ArrowRight",
   "b",
-  "a"
-];
+  "a"];
+
 
 function init() {
-  // your code here
+  let index = 0;
+  document.body.addEventListener('keydown', function(e) {
+    const key = e.key
+ 
+    
+    if (key === codes[index]) {
+      index++
+      
+      if (index === codes.length) {
+        alert("YAY!");
+        
+        index = 0
+      }
+     } else {
+        index = 0
+      }
+  })
 }
+
