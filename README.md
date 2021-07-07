@@ -1,3 +1,4 @@
+
 # Konami Code Lab
 
 ## Objectives
