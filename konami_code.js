@@ -11,6 +11,19 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
+
+
+  function init(){
+let orderedCounter = 0
+ document.body.addEventListener('keydown', function(e){
+  if(e.key === codes[orderedCounter]){
+	orderedCounter++
+  if(orderedCounter === codes.length){
+		alert("Hurray!")
+    orderedCounter = 0
+	}
+} else {
+	orderedCounter = 0
+}
+ })
 }
