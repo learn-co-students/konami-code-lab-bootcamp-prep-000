@@ -11,6 +11,24 @@ const codes = [
   "a"
 ];
 
-function init() {
+
+
+function init (){
+var index = 0
+
+document.body.addEventListener('keydown', function(e) {
   // your code here
+    const key = parseInt(e.detail || e.which)
+
+    if (key === code[index]) {
+      index++
+
+      if (index === code.length - 1) {
+        alert("KANAMI!!!")
+        index = 0
+      }
+    } else {
+      index = 0
+    }
+})
 }
