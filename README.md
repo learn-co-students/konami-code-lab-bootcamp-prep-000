@@ -1,4 +1,4 @@
-# Konami Code Lab
+http# Konami Code Lab
 
 ## Objectives
 
@@ -26,9 +26,7 @@ const codes = [
   "a"
 ];
 
-function init() {
-  // your code here
-}
+
 ```
 
 But what could those keycodes be? They're the famous
