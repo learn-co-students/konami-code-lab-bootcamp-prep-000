@@ -1,7 +1,7 @@
 require('./helpers.js')
 const sinon = require('sinon')
 
-describe("index.js", () => {
+describe("konami_code.js", () => {
 
   const codes = [
     "ArrowUp",
